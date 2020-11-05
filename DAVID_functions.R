@@ -3,6 +3,7 @@
 library(stringr)
 library(stringi)
 library(dplyr)
+library(ggplot2)
 
 # functions
 
