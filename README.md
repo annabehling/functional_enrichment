@@ -8,19 +8,19 @@ In this instance, the subset of interesting genes is those with a particular exp
 
 The following code utilises two routes of gene ontology (GO) functional enrichment analysis - [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO").
 
-DAVID - what it does (annotation, enrichment), what it takes as input (list, background(or not)), entry point to this code ...
+DAVID - what it does (annotation, enrichment), what it takes as input (list, background(or not)), entry point to this code ...  
 topGO - what it does (enrichment), what it takes as input, entry point to this code ...
 
 ## Installation
 
-To install the required scripts, first clone the **DEA_and_fit** repository.
+To install the required scripts, first clone the **functional_enrichment** repository.
 ```
 git clone https://github.com/annabehling/functional_enrichment
 ```
 
-## Usage - DAVID functional enrichment
+## Usage - DAVID functional enrichment analysis
 
-To run the functions found in the file `DAVID_functions.R`, you will need a directory containing raw GO enrichment tables, downloaded from the [DAVID bioinformatics resource](https://david.ncifcrf.gov/).
+To run the functions found in the file `DAVID_functions.R`, you will need a directory containing raw GO enrichment tables, downloaded from the DAVID bioinformatics resource.
 
 Example files for DAVID GO term enrichment among Homeolog Expression Bias (HEBi) genes can be found in `files/DAVID_HEBi`.
 
@@ -60,7 +60,7 @@ GO_scatter(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_davi
 In this example code, we have plotted from biological process level 2.  
 The output should of these functions should match the following plot, which can also be found as an example output file in `files/DAVID_BP_2.png`.
 
-![Image of DAVID output plot](files/DAVID_BP_2.png "DAVID output plot")
+![Image of DAVID output plot](files/DAVID_BP_2.png "DAVID output plot")  
 The plot shows no common enriched GO terms at biological process level 2.
 
 Alternatively, to see if there are any common GO terms across any GO ontology level, run:
@@ -69,3 +69,5 @@ mapply(FUN = common_terms, allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david
 ```
 
 ## Usage - topGO functional enrichment analysis
+
+To run the functions found in the file `topGO_functions.R`, you will need ...
