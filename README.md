@@ -19,12 +19,16 @@ Cox, M.P., T. Dong, G. Shen, Y. Dalvi, D.B. Scott and A.R.D. Ganley. 2014. An in
 
 The following code utilises two routes of gene ontology (GO) functional enrichment analysis - [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO").
 
-**DAVID** in an online tool that can perform functional annotation and functional enrichment analyses. It requires the user to submit a gene list with particular sequence identifiers, and gives the user the possibility of submitting a background gene list, or using the species background provided by the DAVID knowledgebase. Species must be present in the DAVID knowledgebase for usage of the tool.
+### DAVID 
+
+DAVID is an online tool that can perform functional annotation and functional enrichment analyses. It requires the user to submit a gene list with particular sequence identifiers, and gives the user the possibility of submitting a background gene list, or using the species background provided by the DAVID knowledgebase. Species must be present in the DAVID knowledgebase for usage of the tool.
 
 Results of the enrichment analyses can then be downloaded as `.txt` files.  
 DAVID enables GO enrichment analyses at specific GO levels (1-5). 
 
-**topGO** is an R package that can perform GO term enrichment analysis on functionally-annotated genes. Unlike in DAVID, the topGO GO enrichment analyses are level-independent.
+### topGO
+
+topGO is an R package that can perform GO term enrichment analysis on functionally-annotated genes. Unlike in DAVID, the topGO GO enrichment analyses are level-independent.
 
 ## Installation
 
