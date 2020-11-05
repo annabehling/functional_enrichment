@@ -76,14 +76,3 @@ GO_scatter <- function(allo_f_david_out, hh_f_david_out, allo_p_david_out, hh_p_
           axis.title = element_text(face="bold"), #formats axis titles
           axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1)) #formats angle and position of x axis labels
 }
-
-#take a filtered DAVID GO enrichment table and write it to a LaTeX formatted named file
-david_to_latex <- function(sorted_david, out_file){
-  #sorted_david : output of read_david_go()
-  #out_file : user-defined name of output file (.txt)
-  write.table(sorted_david, out_file, sep = " & ", quote = FALSE, eol = " \\\\\n", row.names = FALSE)
-  #& in between columns
-  #no quotes
-  #\\ at end of each row
-  #need "\\" to escape "\\" as "\" is a special character, and then need the new line character "\n"
-}
