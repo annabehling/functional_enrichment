@@ -52,7 +52,7 @@ all_enriched <- function(int_genes, all_golist){
   all_tab[as.numeric(all_tab$`p value`) < 0.05, ] #print out only results where p < 0.05
 }
 
-#plot enrichment results
+#plot enrichment results for a particular expression classification
 topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh_p_topgo_out, allo_a_topgo_out, hh_a_topgo_out){
   #allo_f_topgo_out : allopolyploid fungi output of all_enriched()
   #hh_f_topgo_out : homoploid hybrid fungi output of all_enriched()
