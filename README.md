@@ -125,26 +125,29 @@ Next, make a character vector of all gene IDs that have a non-NA expression clas
 gene_names <- names(sub_gene2go) 
 ```
 
-Then to get the lists of interesting genes, 
+Then, to get the lists of interesting genes in HEBl, HEBi and HER, run:
 ```{r}
-# get lists of interesting genes
-allo_f_int <- get_int_genes(sub_classes_df_allo_f, allo_f_gene_names)
+int_genes <- get_int_genes(sub_classes_df, gene_names)
 ```
-Talk about indexing
+We can index the list to separate out the interesting genes in each of the categories, where
+`int_genes[[1]]` : HEBl genes
+`int_genes[[2]]` : HEBi genes
+`int_genes[[3]]` : HER genes
 
-Then run the enrichment analyses
+Then, run the enrichment analyses with the indexed list of interesting genes as the foreground and the sub-gene2GO list as the background:
 ```{r}
-# run enrichment analyses
-allo_f_hebl_topgo <- all_enriched(allo_f_int[[1]], allo_f_golist)
-allo_f_hebi_topgo <- all_enriched(allo_f_int[[2]], allo_f_golist)
-allo_f_her_topgo <- all_enriched(allo_f_int[[3]], allo_f_golist)
+hebl_topgo_out <- all_enriched(int_genes[[1]], sub_gene2go)
+hebi_topgo_out <- all_enriched(int_genes[[2]], sub_gene2go)
+her_topgo_out <- all_enriched(int_genes[[3]], sub_gene2go)
 ```
-Run this on all six of our hybrid species
+We can then run the above analyses on all six of our hybrid species (example outputs of which are all available in ...)
 
 Then make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species
 ```{r}
 scatter
 ```
+
+topGO common code
 
 ## Output comparisons
 DAVID vs topGO
