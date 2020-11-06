@@ -39,9 +39,15 @@ git clone https://github.com/annabehling/functional_enrichment
 
 ## Processing of raw DAVID functional enrichment analysis results
 
+### Prerequisites
+
+As DAVID functional enrichment analyses are performed through 'pointy-clicky' methods online, the following functions encompass the processing of raw DAVID output files.
+
 To run the functions found in the file `DAVID_functions.R`, you will need a directory containing raw GO enrichment tables, downloaded from the DAVID bioinformatics resource.
 
-Example files for DAVID GO term enrichment among homeolog expression bias (HEBi) genes can be found in `files/DAVID_HEBi`.
+Example files from a DAVID GO term enrichment analysis among homeolog expression bias (HEBi) genes can be found in `files/DAVID_HEBi`.
+
+### Usage
 
 First load the functions:
 ```{r}
@@ -89,7 +95,56 @@ mapply(FUN = common_terms, allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david
 
 ## topGO functional enrichment analysis and processing
 
-To run the functions found in the file `topGO_functions.R`, you will need a list of background genes with GO annotations, in **gene2GO** format. This means that every gene is present in the list, with zero, one or many GO IDs annotated to each gene. 
+### Prerequisites
 
-You will also need a dataframe with at least two columns; one containing gene IDs (that match the gene2GO list IDs) and one containing the expression category classification for each gene.  
+As topGO functional enrichment analyses are performed in R, the following functions encompass both the running of functional enrichment analyses and the processing of those results.
+
+To run the functions found in the file `topGO_functions.R`, you will need two input files:
+
+1. A dataframe with at least two columns
+  * One column containing all gene IDs that have a non-NA expression category classification
+  * One column (named 'classification') containing the expression classification for each gene
+
 More information on how this dataframe can be made from raw read count data can be found at [this repository](https://github.com/annabehling/DEA_and_fit "github.com/annabehling/DEA_and_fit").
+
+2. A list of background genes with GO annotations, in **gene2GO** format  
+  * Zero, one or many GO IDs are annotated to each gene
+  * The gene ID formats match those in the classification dataframe
+
+Examples of these input files can be found in `files/topGO_input`.
+
+### Usage
+
+First, make a sub-gene2GO list containing only genes with a non-NA expression classification:
+```{r}
+sub_gene2go <- gene2go_list[sub_classes_df$gene_id]
+```
+
+Next, make a character vector of all gene IDs that have a non-NA expression classification:
+```{r}
+gene_names <- names(sub_gene2go) 
+```
+
+Then to get the lists of interesting genes, 
+```{r}
+# get lists of interesting genes
+allo_f_int <- get_int_genes(sub_classes_df_allo_f, allo_f_gene_names)
+```
+Talk about indexing
+
+Then run the enrichment analyses
+```{r}
+# run enrichment analyses
+allo_f_hebl_topgo <- all_enriched(allo_f_int[[1]], allo_f_golist)
+allo_f_hebi_topgo <- all_enriched(allo_f_int[[2]], allo_f_golist)
+allo_f_her_topgo <- all_enriched(allo_f_int[[3]], allo_f_golist)
+```
+Run this on all six of our hybrid species
+
+Then make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species
+```{r}
+scatter
+```
+
+## Output comparisons
+DAVID vs topGO
