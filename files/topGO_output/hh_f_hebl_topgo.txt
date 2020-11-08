@@ -1,0 +1,99 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0002181	cytoplasmic translation	9	BP	162	99	5.8e-16
+GO:0005730	nucleolus	8	CC	274	151	9.1e-12
+GO:0022627	cytosolic small ribosomal subunit	9	CC	57	41	1.7e-10
+GO:0031167	rRNA methylation	12	BP	61	45	4.3e-09
+GO:0003735	structural constituent of ribosome	3	MF	197	98	2.3e-08
+GO:0030687	preribosome, large subunit precursor	5	CC	52	36	2.7e-08
+GO:0005654	nucleoplasm	8	CC	318	114	3.7e-08
+GO:0032040	small-subunit processome	5	CC	50	34	6.2e-08
+GO:0000462	maturation of SSU-rRNA from tricistronic...	12	BP	98	64	8.3e-08
+GO:0022625	cytosolic large ribosomal subunit	9	CC	72	44	9.1e-08
+GO:0000028	ribosomal small subunit assembly	9	BP	26	21	5.3e-07
+GO:0003723	RNA binding	5	MF	460	208	8.5e-07
+GO:0006407	rRNA export from nucleus	13	BP	17	15	1.4e-06
+GO:0042273	ribosomal large subunit biogenesis	7	BP	111	77	2.8e-06
+GO:0000447	endonucleolytic cleavage in ITS1 to sepa...	14	BP	43	28	3.5e-06
+GO:0000463	maturation of LSU-rRNA from tricistronic...	12	BP	43	31	2.2e-05
+GO:0000027	ribosomal large subunit assembly	9	BP	40	25	6.8e-05
+GO:0000480	endonucleolytic cleavage in 5'-ETS of tr...	14	BP	31	20	0.00011
+GO:1902626	assembly of large subunit precursor of p...	9	BP	10	9	0.00018
+GO:0000472	endonucleolytic cleavage to generate mat...	14	BP	32	20	0.00021
+GO:0030170	pyridoxal phosphate binding	6	MF	32	20	0.00026
+GO:0006364	rRNA processing	10	BP	264	157	0.00032
+GO:0005736	RNA polymerase I complex	9	CC	14	11	0.00032
+GO:0001054	RNA polymerase I activity	9	MF	14	11	0.00037
+GO:0042254	ribosome biogenesis	6	BP	379	225	0.00042
+GO:0030515	snoRNA binding	6	MF	26	17	0.00097
+GO:0022626	cytosolic ribosome	7	CC	139	93	0.00146
+GO:0006450	regulation of translational fidelity	4	BP	17	8	0.00156
+GO:0000466	maturation of 5.8S rRNA from tricistroni...	12	BP	86	57	0.00174
+GO:0000054	ribosomal subunit export from nucleus	13	BP	45	24	0.00187
+GO:0006015	5-phosphoribose 1-diphosphate biosynthet...	8	BP	5	5	0.00279
+GO:0005978	glycogen biosynthetic process	9	BP	14	7	0.00280
+GO:0002189	ribose phosphate diphosphokinase complex	6	CC	5	5	0.00280
+GO:0031428	box C/D snoRNP complex	9	CC	5	5	0.00280
+GO:0000287	magnesium ion binding	6	MF	44	23	0.00296
+GO:0004749	ribose phosphate diphosphokinase activit...	6	MF	5	5	0.00301
+GO:0030688	preribosome, small subunit precursor	5	CC	21	14	0.00361
+GO:0009165	nucleotide biosynthetic process	9	BP	104	43	0.00428
+GO:0000448	cleavage in ITS2 between 5.8S rRNA and L...	14	BP	9	7	0.00509
+GO:0003746	translation elongation factor activity	7	MF	11	8	0.00575
+GO:0042255	ribosome assembly	7	BP	73	50	0.00831
+GO:0006386	termination of RNA polymerase III transc...	12	BP	16	10	0.00879
+GO:0000451	rRNA 2'-O-methylation	13	BP	6	5	0.00905
+GO:0031262	Ndc80 complex	11	CC	4	4	0.00909
+GO:0030061	mitochondrial crista	10	CC	4	4	0.00909
+GO:0005576	extracellular region	3	CC	65	30	0.00923
+GO:0030686	90S preribosome	5	CC	42	28	0.01036
+GO:0000049	tRNA binding	6	MF	28	15	0.01173
+GO:0009156	ribonucleoside monophosphate biosyntheti...	10	BP	36	21	0.01212
+GO:0006360	transcription by RNA polymerase I	11	BP	62	28	0.01216
+GO:0034388	Pwp2p-containing subcomplex of 90S preri...	9	CC	6	5	0.01250
+GO:0043614	multi-eIF complex	4	CC	10	7	0.01253
+GO:0000776	kinetochore	9	CC	56	19	0.01257
+GO:0009116	nucleoside metabolic process	7	BP	36	20	0.01276
+GO:0006537	glutamate biosynthetic process	11	BP	9	7	0.01303
+GO:0010494	cytoplasmic stress granule	8	CC	79	34	0.01436
+GO:0003743	translation initiation factor activity	7	MF	31	16	0.01456
+GO:0005666	RNA polymerase III complex	9	CC	17	10	0.01562
+GO:0042274	ribosomal small subunit biogenesis	7	BP	134	86	0.01727
+GO:0010501	RNA secondary structure unwinding	8	BP	22	12	0.01752
+GO:0000056	ribosomal small subunit export from nucl...	14	BP	13	8	0.02160
+GO:0006122	mitochondrial electron transport, ubiqui...	10	BP	11	7	0.02522
+GO:0042797	tRNA transcription by RNA polymerase III	13	BP	18	10	0.02541
+GO:0046034	ATP metabolic process	3	BP	76	35	0.02868
+GO:0005524	ATP binding	9	MF	480	169	0.02896
+GO:0005750	mitochondrial respiratory chain complex ...	11	CC	9	6	0.02916
+GO:0045128	negative regulation of reciprocal meioti...	12	BP	5	5	0.02928
+GO:0046898	response to cycloheximide	6	BP	5	4	0.02936
+GO:0019243	methylglyoxal catabolic process to D-lac...	10	BP	3	3	0.02939
+GO:2000002	negative regulation of DNA damage checkp...	11	BP	3	3	0.02939
+GO:0000464	endonucleolytic cleavage in ITS1 upstrea...	14	BP	3	3	0.02939
+GO:0044206	UMP salvage	13	BP	3	3	0.02939
+GO:0006784	heme A biosynthetic process	9	BP	3	3	0.02939
+GO:0017102	methionyl glutamyl tRNA synthetase compl...	4	CC	3	3	0.02947
+GO:0070545	PeBoW complex	9	CC	3	3	0.02947
+GO:0030289	protein phosphatase 4 complex	6	CC	3	3	0.02947
+GO:0034719	SMN-Sm protein complex	4	CC	3	3	0.02947
+GO:0006473	protein acetylation	9	BP	55	13	0.02984
+GO:0001786	phosphatidylserine binding	6	MF	3	3	0.03078
+GO:0004066	asparagine synthase (glutamine-hydrolyzi...	6	MF	3	3	0.03078
+GO:0050291	sphingosine N-acyltransferase activity	7	MF	3	3	0.03078
+GO:0070180	large ribosomal subunit rRNA binding	7	MF	9	6	0.03133
+GO:0032581	ER-dependent peroxisome organization	7	BP	7	5	0.03249
+GO:0006555	methionine metabolic process	10	BP	32	14	0.03395
+GO:0051083	'de novo' cotranslational protein foldin...	5	BP	5	4	0.03413
+GO:1990145	maintenance of translational fidelity	9	BP	5	4	0.03413
+GO:0044205	'de novo' UMP biosynthetic process	13	BP	5	4	0.03413
+GO:0019346	transsulfuration	11	BP	5	4	0.03413
+GO:0042721	TIM22 mitochondrial import inner membran...	11	CC	5	4	0.03424
+GO:0005315	inorganic phosphate transmembrane transp...	6	MF	7	5	0.03473
+GO:0051603	proteolysis involved in cellular protein...	8	BP	195	37	0.03584
+GO:0005840	ribosome	6	CC	232	117	0.03682
+GO:0051082	unfolded protein binding	4	MF	72	30	0.04005
+GO:0019843	rRNA binding	6	MF	66	34	0.04060
+GO:0043022	ribosome binding	5	MF	25	13	0.04296
+GO:0001172	transcription, RNA-templated	10	BP	12	7	0.04464
+GO:0005665	RNA polymerase II, core complex	10	CC	12	7	0.04486
+GO:0005199	structural constituent of cell wall	3	MF	12	7	0.04837

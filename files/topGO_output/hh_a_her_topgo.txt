@@ -1,0 +1,45 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0030170	pyridoxal phosphate binding	6	MF	24	9	2.4e-06
+GO:0005577	fibrinogen complex	5	CC	5	4	3.2e-05
+GO:0042180	cellular ketone metabolic process	4	BP	99	16	9.5e-05
+GO:0030674	protein-macromolecule adaptor activity	4	MF	6	4	0.00013
+GO:0030168	platelet activation	7	BP	6	4	0.00014
+GO:0005615	extracellular space	4	CC	41	12	0.00021
+GO:0004866	endopeptidase inhibitor activity	6	MF	60	13	0.00060
+GO:0000155	phosphorelay sensor kinase activity	8	MF	4	3	0.00065
+GO:0048264	determination of ventral identity	9	BP	4	3	0.00072
+GO:0018106	peptidyl-histidine phosphorylation	10	BP	4	3	0.00072
+GO:0044106	cellular amine metabolic process	6	BP	63	11	0.00108
+GO:0051258	protein polymerization	8	BP	15	5	0.00110
+GO:0008299	isoprenoid biosynthetic process	7	BP	5	3	0.00172
+GO:0005102	signaling receptor binding	4	MF	25	6	0.00194
+GO:0009058	biosynthetic process	3	BP	509	41	0.00247
+GO:0042613	MHC class II protein complex	7	CC	2	2	0.00266
+GO:0004326	tetrahydrofolylpolyglutamate synthase ac...	6	MF	2	2	0.00308
+GO:0004452	isopentenyl-diphosphate delta-isomerase ...	6	MF	2	2	0.00308
+GO:0003867	4-aminobutyrate transaminase activity	6	MF	2	2	0.00308
+GO:0004838	L-tyrosine:2-oxoglutarate aminotransfera...	7	MF	2	2	0.00308
+GO:0016847	1-aminocyclopropane-1-carboxylate syntha...	5	MF	2	2	0.00308
+GO:0045165	cell fate commitment	5	BP	6	4	0.00318
+GO:0031017	exocrine pancreas development	8	BP	6	3	0.00329
+GO:0021778	oligodendrocyte cell fate specification	12	BP	2	2	0.00331
+GO:0006919	activation of cysteine-type endopeptidas...	14	BP	2	2	0.00331
+GO:0021755	eurydendroid cell differentiation	15	BP	2	2	0.00331
+GO:0005777	peroxisome	7	CC	13	4	0.00333
+GO:0004869	cysteine-type endopeptidase inhibitor ac...	7	MF	14	4	0.00592
+GO:0003997	acyl-CoA oxidase activity	6	MF	3	2	0.00891
+GO:0007422	peripheral nervous system development	7	BP	3	2	0.00955
+GO:0009448	gamma-aminobutyric acid metabolic proces...	8	BP	3	2	0.00955
+GO:0006486	protein glycosylation	8	BP	9	3	0.01218
+GO:0005840	ribosome	6	CC	153	13	0.01633
+GO:0001755	neural crest cell migration	11	BP	4	2	0.01838
+GO:0012502	induction of programmed cell death	8	BP	4	2	0.01838
+GO:0006548	histidine catabolic process	10	BP	4	2	0.01838
+GO:0004222	metalloendopeptidase activity	7	MF	11	3	0.02003
+GO:0030173	integral component of Golgi membrane	9	CC	5	2	0.02399
+GO:0032787	monocarboxylic acid metabolic process	7	BP	64	9	0.02727
+GO:0009072	aromatic amino acid family metabolic pro...	8	BP	16	5	0.02807
+GO:0009396	folic acid-containing compound biosynthe...	8	BP	5	2	0.02948
+GO:0006839	mitochondrial transport	5	BP	5	2	0.02948
+GO:0006575	cellular modified amino acid metabolic p...	5	BP	18	5	0.03338
+GO:0006635	fatty acid beta-oxidation	10	BP	6	2	0.04257

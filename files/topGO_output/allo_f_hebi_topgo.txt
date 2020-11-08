@@ -1,0 +1,14 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0005844	polysome	4	CC	2	2	0.011
+GO:0003774	motor activity	8	MF	17	5	0.011
+GO:0005992	trehalose biosynthetic process	8	BP	2	2	0.014
+GO:0032007	negative regulation of TOR signaling	9	BP	2	2	0.014
+GO:0030846	termination of RNA polymerase II transcr...	13	BP	2	2	0.014
+GO:0071028	nuclear mRNA surveillance	11	BP	2	2	0.014
+GO:0016459	myosin complex	8	CC	6	3	0.019
+GO:0003779	actin binding	5	MF	21	7	0.028
+GO:0003924	GTPase activity	8	MF	43	10	0.032
+GO:0007017	microtubule-based process	3	BP	30	7	0.038
+GO:0007010	cytoskeleton organization	6	BP	37	7	0.038
+GO:0140053	mitochondrial gene expression	6	BP	8	3	0.038
+GO:0006904	vesicle docking involved in exocytosis	9	BP	3	2	0.039

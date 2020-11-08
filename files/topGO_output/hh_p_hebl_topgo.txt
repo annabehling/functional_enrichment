@@ -1,0 +1,40 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0000776	kinetochore	9	CC	5	4	0.00023
+GO:0000786	nucleosome	8	CC	20	7	0.00084
+GO:0042026	protein refolding	4	BP	4	3	0.0026
+GO:0048046	apoplast	4	CC	14	5	0.00441
+GO:0005506	iron ion binding	7	MF	43	11	0.0053
+GO:0006629	lipid metabolic process	4	BP	133	18	0.0062
+GO:0009707	chloroplast outer membrane	10	CC	2	2	0.00717
+GO:0009570	chloroplast stroma	8	CC	54	11	0.00790
+GO:0045717	negative regulation of fatty acid biosyn...	11	BP	2	2	0.0080
+GO:0042724	thiamine-containing compound biosyntheti...	7	BP	2	2	0.0080
+GO:0006772	thiamine metabolic process	7	BP	2	2	0.0080
+GO:0020037	heme binding	5	MF	45	10	0.0091
+GO:0004364	glutathione transferase activity	5	MF	2	2	0.0093
+GO:0051538	3 iron, 4 sulfur cluster binding	5	MF	2	2	0.0093
+GO:0008419	RNA lariat debranching enzyme activity	9	MF	2	2	0.0093
+GO:0001067	regulatory region nucleic acid binding	5	MF	27	5	0.0113
+GO:0051259	protein complex oligomerization	7	BP	6	3	0.0116
+GO:0000287	magnesium ion binding	6	MF	22	6	0.0153
+GO:0030968	endoplasmic reticulum unfolded protein r...	8	BP	7	3	0.0189
+GO:0071806	protein transmembrane transport	9	BP	22	4	0.0190
+GO:0046982	protein heterodimerization activity	5	MF	23	6	0.0190
+GO:0006438	valyl-tRNA aminoacylation	12	BP	3	2	0.0225
+GO:0060236	regulation of mitotic spindle organizati...	10	BP	3	2	0.0225
+GO:0000919	cell plate assembly	7	BP	3	2	0.0225
+GO:0043621	protein self-association	4	MF	7	3	0.0233
+GO:0015450	P-P-bond-hydrolysis-driven protein trans...	7	MF	7	3	0.0233
+GO:0080047	GDP-L-galactose phosphorylase activity	7	MF	3	2	0.0262
+GO:0080048	GDP-D-glucose phosphorylase activity	7	MF	3	2	0.0262
+GO:0004832	valine-tRNA ligase activity	6	MF	3	2	0.0262
+GO:0097367	carbohydrate derivative binding	3	MF	474	43	0.0271
+GO:0051604	protein maturation	6	BP	23	5	0.0281
+GO:0051082	unfolded protein binding	4	MF	33	7	0.0348
+GO:0031936	negative regulation of chromatin silenci...	16	BP	4	2	0.0424
+GO:0016584	nucleosome positioning	10	BP	4	2	0.0424
+GO:0006749	glutathione metabolic process	7	BP	4	2	0.0424
+GO:0042542	response to hydrogen peroxide	6	BP	4	2	0.0424
+GO:0031491	nucleosome binding	4	MF	4	2	0.0490
+GO:0008308	voltage-gated anion channel activity	9	MF	4	2	0.0490
+GO:0046658	anchored component of plasma membrane	6	CC	17	4	0.04971

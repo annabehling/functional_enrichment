@@ -1,0 +1,17 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0009664	plant-type cell wall organization	7	BP	11	2	0.00029
+GO:0005199	structural constituent of cell wall	3	MF	10	2	0.00029
+GO:0045431	flavonol synthase activity	6	MF	2	1	0.00546
+GO:0047372	acylglycerol lipase activity	6	MF	2	1	0.00546
+GO:0019757	glycosinolate metabolic process	7	BP	3	1	0.00747
+GO:0051555	flavonol biosynthetic process	7	BP	3	1	0.00747
+GO:0010192	mucilage biosynthetic process	5	BP	4	1	0.00995
+GO:0006662	glycerol ether metabolic process	5	BP	6	1	0.01490
+GO:0004620	phospholipase activity	6	MF	6	1	0.01631
+GO:0000786	nucleosome	8	CC	20	1	0.022
+GO:0006334	nucleosome assembly	10	BP	12	1	0.02961
+GO:0015035	protein disulfide oxidoreductase activit...	6	MF	12	1	0.03238
+GO:0042025	host cell nucleus	10	CC	33	1	0.036
+GO:0016042	lipid catabolic process	5	BP	15	1	0.03689
+GO:0000976	transcription regulatory region sequence...	8	MF	17	1	0.04560
+GO:0045454	cell redox homeostasis	6	BP	20	1	0.04892
