@@ -82,7 +82,7 @@ GO_scatter(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_davi
            y_label = "GO term (Biological Process level 2)")
 ```
 
-In this example code, we have plotted from biological process level 2.  
+In this example code, we have plotted biological process level 2, in the HEBi category.  
 The output should of these functions should match the following plot, which can also be found as an example output file in `files/DAVID_BP_2.png`.
 
 ![Image of DAVID output plot](files/DAVID_BP_2.png "DAVID output plot")  
@@ -134,20 +134,46 @@ We can index the list to separate out the interesting genes in each of the categ
 `int_genes[[2]]` : HEBi genes
 `int_genes[[3]]` : HER genes
 
-Then, run the enrichment analyses with the indexed list of interesting genes as the foreground and the sub-gene2GO list as the background:
+Then, run the enrichment analyses in all ontologies with the indexed list of interesting genes as the foreground and the sub-gene2GO list as the background:
 ```{r}
-hebl_topgo_out <- all_enriched(int_genes[[1]], sub_gene2go)
-hebi_topgo_out <- all_enriched(int_genes[[2]], sub_gene2go)
-her_topgo_out <- all_enriched(int_genes[[3]], sub_gene2go)
+hebl_topgo <- all_enriched(int_genes[[1]], sub_gene2go)
+hebi_topgo <- all_enriched(int_genes[[2]], sub_gene2go)
+her_topgo <- all_enriched(int_genes[[3]], sub_gene2go)
 ```
-We can then run the above analyses on all six of our hybrid species (example outputs of which are all available in ...)
+We can then run the above analyses on all six of our hybrid species (the following example outputs of which are all available in `files/topGO_output`).
+* `allo_a_hebi_topgo.txt` : allopolyploid animals HEBi
+* `allo_a_hebl_topgo.txt` : allopolyploid animals HEBl
+* `allo_a_her_topgo.txt` : allopolyploid animals HER
+* `allo_f_hebi_topgo.txt` : allopolyploid fungi HEBi
+* `allo_f_hebl_topgo.txt` : allopolyploid fungi HEBl
+* `allo_f_her_topgo.txt` : allopolyploid fungi HER
+* `allo_p_hebi_topgo.txt` : allopolyploid plants HEBi
+* `allo_p_hebl_topgo.txt` : allopolyploid plants HEBl
+* `allo_p_her_topgo.txt` : allopolyploid plants HER
+* `hh_a_hebi_topgo.txt` : homoploid hybrid animals HEBi
+* `hh_a_hebl_topgo.txt` : homoploid hybrid animals HEBl
+* `hh_a_her_topgo.txt` : homoploid hybrid animals HER
+* `hh_f_hebi_topgo.txt` : homoploid hybrid fungi HEBi
+* `hh_f_hebl_topgo.txt` : homoploid hybrid fungi HEBl
+* `hh_f_her_topgo.txt` : homoploid hybrid fungi HER
+* `hh_p_hebi_topgo.txt` : homoploid hybrid plants HEBi
+* `hh_p_hebl_topgo.txt` : homoploid hybrid plants HEBl
+* `hh_p_her_topgo.txt` : homoploid hybrid plants HER
 
-Then make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species
+Then to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, read in the example output files using `read.table()`, and then run:
 ```{r}
-scatter
+topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
+              hh_f_hebi_topgo[hh_f_hebi_topgo$ontology == "BP", ],
+              allo_p_hebi_topgo[allo_p_hebi_topgo$ontology == "BP", ],
+              hh_p_hebi_topgo[hh_p_hebi_topgo$ontology == "BP", ],
+              allo_a_hebi_topgo[allo_a_hebi_topgo$ontology == "BP", ],
+              hh_a_hebi_topgo[hh_a_hebi_topgo$ontology == "BP", ], 
+              y_label = "GO term (Biological Process)")
 ```
 
-topGO common code
+In this example code, we have plotted biological process, in the HEBi category.
+The output should of these functions should match the following plot, which can also be found as an example output file in `files/topGO_BP.png`.
 
-## Output comparisons
-DAVID vs topGO
+![Image of topGO output plot](files/topGO_BP.png "topGO output plot")
+
+As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear that there are no terms common to every system.
