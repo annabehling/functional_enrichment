@@ -88,24 +88,3 @@ topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh
           panel.background = element_rect(colour = "black", size=0.5), #adds a plot border
           axis.title = element_text(face="bold")) #formats axis titles
 }
-
-#find common GO terms across all representative species 
-topGO_common <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh_p_topgo_out, allo_a_topgo_out, hh_a_topgo_out){
-  #allo_f_topgo_out : allopolyploid fungi output of all_enriched()
-  #hh_f_topgo_out : homoploid hybrid fungi output of all_enriched()
-  #allo_p_topgo_out : allopolyploid plants output of all_enriched()
-  #hh_p_topgo_out : homoploid hybrid plants ouput of all_enriched()
-  #allo_a_topgo_out : allopolyploid animals output of all_enriched()
-  #hh_a_topgo_out : homoploid hybrid animals output of all_enriched()
-  if(nrow(allo_f_topgo_out) > 0) allo_f_topgo_out$system <- "allo fungi"
-  if(nrow(hh_f_topgo_out) > 0) hh_f_topgo_out$system <- "HH fungi"
-  if(nrow(allo_p_topgo_out) > 0) allo_p_topgo_out$system <- "allo plants"
-  if(nrow(hh_p_topgo_out) > 0) hh_p_topgo_out$system <- "HH plants"
-  if(nrow(allo_a_topgo_out) > 0) allo_a_topgo_out$system <- "allo animals"
-  if(nrow(hh_a_topgo_out) > 0) hh_a_topgo_out$system <- "HH animals"
-  
-  scatter_tab <- rbind(allo_f_topgo_out, hh_f_topgo_out,
-                       allo_p_topgo_out, hh_p_topgo_out,
-                       allo_a_topgo_out, hh_a_topgo_out)
-  scatter_tab
-}
