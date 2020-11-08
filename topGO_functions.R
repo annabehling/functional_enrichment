@@ -53,7 +53,7 @@ all_enriched <- function(int_genes, all_golist){
 }
 
 #plot enrichment results for a particular expression classification
-topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh_p_topgo_out, allo_a_topgo_out, hh_a_topgo_out){
+topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh_p_topgo_out, allo_a_topgo_out, hh_a_topgo_out, y_label){
   #allo_f_topgo_out : allopolyploid fungi output of all_enriched()
   #hh_f_topgo_out : homoploid hybrid fungi output of all_enriched()
   #allo_p_topgo_out : allopolyploid plants output of all_enriched()
@@ -81,10 +81,11 @@ topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh
     scale_x_discrete(drop=F) +
     geom_point() +
     scale_color_gradient(low="blue", high="red") +
-    labs(x="Biological system", y="GO term", size="Annotated", color="-log10(p value)") +
+    labs(x="Biological system", y=y_label, size="Annotated", color="-log10(p value)") +
     theme_bw() +
     theme(panel.grid.major = element_blank(), 
           panel.grid.minor = element_blank(), #formats background
           panel.background = element_rect(colour = "black", size=0.5), #adds a plot border
-          axis.title = element_text(face="bold")) #formats axis titles
+          axis.title = element_text(face="bold"), #formats axis titles
+          axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1)) #formats angle and position of x axis labels
 }
