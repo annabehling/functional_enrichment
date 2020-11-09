@@ -56,12 +56,12 @@ source("DAVID_functions.R")
 
 To read in and filter all of the example enrichment tables, applying a *p* value threshold of 0.05, run:
 ```{r}
-allo_f_hebi_david <- read_david_go("./files/DAVID_HEBi") #allopolyploid fungi
-hh_f_hebi_david <- read_david_go("./files/DAVID_HEBi") #homoploid hybrid fungi
-allo_p_hebi_david <- read_david_go("./files/DAVID_HEBi") #allopolyploid plants
-hh_p_hebi_david <- read_david_go("./files/DAVID_HEBi") #homoploid hybrid plants
-allo_a_hebi_david <- read_david_go("./files/DAVID_HEBi") #allopolyploid animals
-hh_a_hebi_david <- read_david_go("./files/DAVID_HEBi") #homoploid hybrid animals
+allo_f_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_fungi") #allopolyploid fungi
+hh_f_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_fungi") #homoploid hybrid fungi
+allo_p_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_plants") #allopolyploid plants
+hh_p_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_plants") #homoploid hybrid plants
+allo_a_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_animals") #allopolyploid animals
+hh_a_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
 ```
 
 We then can check that all data files are present; we expect there to be 15 tables x 6 systems = 90 data tables total.  
@@ -114,6 +114,8 @@ More information on how this dataframe can be made from raw read count data can 
 Examples of these input files can be found in `files/topGO_input`.
 
 ### Usage
+
+The `.txt` files can be read in using `read.table()`.
 
 First, make a sub-gene2GO list containing only genes with a non-NA expression classification:
 ```{r}
