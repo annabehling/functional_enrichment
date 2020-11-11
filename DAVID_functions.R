@@ -10,7 +10,7 @@ library(ggplot2)
 #filter a raw DAVID GO enrichment table
 filter_david_go <- function(david_out){
   #david_out : raw DAVID GO enrichment table
-  raw_tab <- read.table(david_out, header = TRUE, sep = "\t", quote = "", stringsAsFactors = FALSE) #read in DAVID output
+  raw_tab <- read.table(david_out, header = TRUE, sep = "\t", quote = '"', stringsAsFactors = FALSE) #read in DAVID output
   red_tab <- raw_tab[,c(2,8,3,5)] #get only columns we want, and order them
   red_tab$GO_ID <- sapply(str_split(red_tab[,1], "~"), "[", 1) #split first column on the "~", and make first part GO_ID column
   red_tab$GO_term <- sapply(str_split(red_tab[,1], "~"), "[", 2) #split first column on the "~" and make second part GO term column
