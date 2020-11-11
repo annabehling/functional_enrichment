@@ -1,9 +1,0 @@
-GO ID	GO term	level	ontology	background count	subset count	p value
-GO:0006077	(1->6)-beta-D-glucan metabolic process	9	BP	2	1	0.010
-GO:0071786	endoplasmic reticulum tubular network or...	7	BP	2	1	0.010
-GO:0036374	glutathione hydrolase activity	8	MF	2	1	0.012
-GO:0051274	beta-glucan biosynthetic process	9	BP	3	1	0.015
-GO:0006751	glutathione catabolic process	8	BP	3	1	0.015
-GO:0070628	proteasome binding	4	MF	3	1	0.017
-GO:0051539	4 iron, 4 sulfur cluster binding	5	MF	6	1	0.034
-GO:0008270	zinc ion binding	7	MF	136	3	0.040
