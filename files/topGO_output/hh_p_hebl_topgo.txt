@@ -1,0 +1,88 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0030968	endoplasmic reticulum unfolded protein r...	8	BP	18	10	7.1e-07
+GO:0000786	nucleosome	8	CC	35	13	1.8e-06
+GO:0005788	endoplasmic reticulum lumen	7	CC	14	8	3.8e-06
+GO:0055114	oxidation-reduction process	3	BP	691	92	6.3e-06
+GO:0051082	unfolded protein binding	4	MF	73	18	0.00013
+GO:0044772	mitotic cell cycle phase transition	6	BP	28	9	0.00016
+GO:0042026	protein refolding	4	BP	16	7	0.00025
+GO:0006457	protein folding	3	BP	125	28	0.00056
+GO:0048046	apoplast	4	CC	47	11	0.0012
+GO:0000307	cyclin-dependent protein kinase holoenzy...	8	CC	22	7	0.0014
+GO:0020037	heme binding	5	MF	88	18	0.00142
+GO:0051085	chaperone cofactor-dependent protein ref...	6	BP	11	5	0.00167
+GO:0051787	misfolded protein binding	4	MF	15	6	0.00176
+GO:0044183	protein folding chaperone	2	MF	16	6	0.00259
+GO:0060236	regulation of mitotic spindle organizati...	10	BP	4	3	0.00268
+GO:0016491	oxidoreductase activity	3	MF	670	91	0.00275
+GO:0004364	glutathione transferase activity	5	MF	17	6	0.00368
+GO:0003677	DNA binding	5	MF	541	65	0.00469
+GO:0006629	lipid metabolic process	4	BP	288	42	0.00476
+GO:0034663	endoplasmic reticulum chaperone complex	7	CC	5	3	0.0049
+GO:0046658	anchored component of plasma membrane	6	CC	41	9	0.0052
+GO:0051259	protein complex oligomerization	7	BP	9	4	0.00560
+GO:0009800	cinnamic acid biosynthetic process	9	BP	5	3	0.00626
+GO:0006542	glutamine biosynthetic process	11	BP	5	3	0.00626
+GO:0000776	kinetochore	9	CC	10	4	0.0064
+GO:0005506	iron ion binding	7	MF	96	18	0.00709
+GO:0004356	glutamate-ammonia ligase activity	7	MF	5	3	0.00752
+GO:0045548	phenylalanine ammonia-lyase activity	6	MF	5	3	0.00752
+GO:0043621	protein self-association	4	MF	14	5	0.00758
+GO:0019310	inositol catabolic process	8	BP	2	2	0.00804
+GO:0007142	male meiosis II	10	BP	2	2	0.00804
+GO:0071493	cellular response to UV-B	9	BP	2	2	0.00804
+GO:0015267	channel activity	5	MF	69	10	0.00905
+GO:0047617	acyl-CoA hydrolase activity	7	MF	2	2	0.00914
+GO:0050113	inositol oxygenase activity	5	MF	2	2	0.00914
+GO:0051538	3 iron, 4 sulfur cluster binding	5	MF	2	2	0.00914
+GO:0048471	perinuclear region of cytoplasm	4	CC	11	4	0.0094
+GO:0005874	microtubule	8	CC	75	14	0.0097
+GO:0016747	transferase activity, transferring acyl ...	5	MF	119	17	0.01019
+GO:0034620	cellular response to unfolded protein	7	BP	24	13	0.01123
+GO:0042542	response to hydrogen peroxide	6	BP	6	3	0.01170
+GO:0016788	hydrolase activity, acting on ester bond...	4	MF	323	35	0.01298
+GO:0016538	cyclin-dependent protein serine/threonin...	6	MF	16	5	0.01409
+GO:0046982	protein heterodimerization activity	5	MF	49	10	0.01585
+GO:0001067	regulatory region nucleic acid binding	5	MF	68	7	0.01876
+GO:0006334	nucleosome assembly	10	BP	25	6	0.02054
+GO:0042025	host cell nucleus	10	CC	85	13	0.0207
+GO:0010035	response to inorganic substance	4	BP	77	15	0.02220
+GO:0042724	thiamine-containing compound biosyntheti...	7	BP	3	2	0.02268
+GO:0006438	valyl-tRNA aminoacylation	12	BP	3	2	0.02268
+GO:0010043	response to zinc ion	6	BP	3	2	0.02268
+GO:0006772	thiamine metabolic process	7	BP	3	2	0.02268
+GO:0000919	cell plate assembly	7	BP	3	2	0.02268
+GO:0000079	regulation of cyclin-dependent protein s...	12	BP	19	5	0.02302
+GO:0009408	response to heat	5	BP	35	6	0.02309
+GO:0004832	valine-tRNA ligase activity	6	MF	3	2	0.02567
+GO:0050378	UDP-glucuronate 4-epimerase activity	6	MF	3	2	0.02567
+GO:0030151	molybdenum ion binding	7	MF	3	2	0.02567
+GO:0016151	nickel cation binding	7	MF	3	2	0.02567
+GO:0008419	RNA lariat debranching enzyme activity	9	MF	3	2	0.02567
+GO:0080047	GDP-L-galactose phosphorylase activity	7	MF	3	2	0.02567
+GO:0045910	negative regulation of DNA recombination	10	BP	8	3	0.02858
+GO:0009074	aromatic amino acid family catabolic pro...	9	BP	8	3	0.02858
+GO:1902222	erythrose 4-phosphate/phosphoenolpyruvat...	10	BP	8	3	0.02858
+GO:0031936	negative regulation of chromatin silenci...	16	BP	8	3	0.02858
+GO:0016853	isomerase activity	3	MF	179	27	0.03130
+GO:0005507	copper ion binding	7	MF	20	5	0.03636
+GO:0051233	spindle midzone	9	CC	4	2	0.0364
+GO:0002189	ribose phosphate diphosphokinase complex	6	CC	4	2	0.0364
+GO:0005199	structural constituent of cell wall	3	MF	14	4	0.03815
+GO:0006749	glutathione metabolic process	7	BP	15	4	0.03938
+GO:0006558	L-phenylalanine metabolic process	10	BP	9	3	0.04006
+GO:0042908	xenobiotic transport	5	BP	9	3	0.04006
+GO:0005509	calcium ion binding	6	MF	105	16	0.04044
+GO:0016705	oxidoreductase activity, acting on paire...	4	MF	86	15	0.04103
+GO:0004497	monooxygenase activity	4	MF	72	12	0.04166
+GO:0045717	negative regulation of fatty acid biosyn...	11	BP	4	2	0.04268
+GO:0007163	establishment or maintenance of cell pol...	3	BP	4	2	0.04268
+GO:0019632	shikimate metabolic process	8	BP	4	2	0.04268
+GO:0045338	farnesyl diphosphate metabolic process	8	BP	4	2	0.04268
+GO:0006015	5-phosphoribose 1-diphosphate biosynthet...	8	BP	4	2	0.04268
+GO:1905786	positive regulation of anaphase-promotin...	14	BP	4	2	0.04268
+GO:0005771	multivesicular body	10	CC	10	3	0.0431
+GO:0042910	xenobiotic transmembrane transporter act...	4	MF	9	3	0.04721
+GO:0016864	intramolecular oxidoreductase activity, ...	5	MF	9	3	0.04721
+GO:0004749	ribose phosphate diphosphokinase activit...	6	MF	4	2	0.04810
+GO:0080048	GDP-D-glucose phosphorylase activity	7	MF	4	2	0.04810

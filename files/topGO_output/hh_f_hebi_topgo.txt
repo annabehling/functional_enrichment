@@ -1,0 +1,60 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0005536	glucose binding	5	MF	6	4	0.0012
+GO:0006013	mannose metabolic process	7	BP	4	3	0.0034
+GO:0005047	signal recognition particle binding	5	MF	4	3	0.0036
+GO:0006491	N-glycan processing	7	BP	8	4	0.0045
+GO:0071006	U2-type catalytic step 1 spliceosome	9	CC	8	4	0.0045
+GO:0001678	cellular glucose homeostasis	8	BP	15	6	0.0078
+GO:0000506	glycosylphosphatidylinositol-N-acetylglu...	7	CC	5	3	0.0079
+GO:0071038	nuclear polyadenylation-dependent tRNA c...	13	BP	14	5	0.0081
+GO:0004340	glucokinase activity	8	MF	5	3	0.0084
+GO:0019158	mannokinase activity	8	MF	5	3	0.0084
+GO:0008865	fructokinase activity	8	MF	5	3	0.0084
+GO:1904184	positive regulation of pyruvate dehydrog...	7	BP	2	2	0.0094
+GO:0006597	spermine biosynthetic process	10	BP	2	2	0.0094
+GO:0019483	beta-alanine biosynthetic process	9	BP	2	2	0.0094
+GO:0030643	cellular phosphate ion homeostasis	10	BP	2	2	0.0094
+GO:0010973	positive regulation of division septum a...	11	BP	2	2	0.0094
+GO:1904382	mannose trimming involved in glycoprotei...	14	BP	2	2	0.0094
+GO:0033164	glycolipid 6-alpha-mannosyltransferase a...	8	MF	2	2	0.0099
+GO:0004741	[pyruvate dehydrogenase (lipoamide)] pho...	8	MF	2	2	0.0099
+GO:0071051	polyadenylation-dependent snoRNA 3'-end ...	12	BP	15	5	0.0112
+GO:0071042	nuclear polyadenylation-dependent mRNA c...	11	BP	15	5	0.0112
+GO:0015940	pantothenate biosynthetic process	9	BP	10	4	0.0115
+GO:0008361	regulation of cell size	6	BP	6	3	0.0146
+GO:0070262	peptidyl-serine dephosphorylation	9	BP	6	3	0.0146
+GO:0044613	nuclear pore central transport channel	9	CC	11	4	0.0169
+GO:0000176	nuclear exosome (RNase complex)	8	CC	11	4	0.0169
+GO:0071035	nuclear polyadenylation-dependent rRNA c...	13	BP	17	5	0.0196
+GO:0001402	signal transduction involved in filament...	6	BP	12	4	0.0232
+GO:0000177	cytoplasmic exosome (RNase complex)	6	CC	12	4	0.0234
+GO:0071007	U2-type catalytic step 2 spliceosome	9	CC	7	3	0.0239
+GO:0000467	exonucleolytic trimming to generate matu...	13	BP	18	5	0.0250
+GO:0006598	polyamine catabolic process	9	BP	3	2	0.0265
+GO:0006571	tyrosine biosynthetic process	11	BP	3	2	0.0265
+GO:0044209	AMP salvage	13	BP	3	2	0.0265
+GO:0010607	negative regulation of cytoplasmic mRNA ...	9	BP	3	2	0.0265
+GO:0009094	L-phenylalanine biosynthetic process	11	BP	3	2	0.0265
+GO:0097344	Rix1 complex	3	CC	3	2	0.0267
+GO:0005853	eukaryotic translation elongation factor...	4	CC	3	2	0.0267
+GO:0005785	signal recognition particle receptor com...	9	CC	3	2	0.0267
+GO:0061908	phagophore	4	CC	3	2	0.0267
+GO:0017091	AU-rich element binding	6	MF	3	2	0.0277
+GO:0004571	mannosyl-oligosaccharide 1,2-alpha-manno...	9	MF	3	2	0.0277
+GO:0031683	G-protein beta/gamma-subunit complex bin...	4	MF	3	2	0.0277
+GO:0004430	1-phosphatidylinositol 4-kinase activity	7	MF	3	2	0.0277
+GO:0004707	MAP kinase activity	8	MF	3	2	0.0277
+GO:0034497	protein localization to phagophore assem...	9	BP	13	4	0.0310
+GO:0044805	late nucleophagy	7	BP	8	3	0.0353
+GO:0000974	Prp19 complex	3	CC	8	3	0.0356
+GO:0030950	establishment or maintenance of actin cy...	8	BP	14	4	0.0402
+GO:0016236	macroautophagy	6	BP	79	12	0.0476
+GO:0006614	SRP-dependent cotranslational protein ta...	13	BP	18	5	0.0492
+GO:0007039	protein catabolic process in the vacuole	8	BP	9	3	0.0492
+GO:0045903	positive regulation of translational fid...	11	BP	9	3	0.0492
+GO:0046854	phosphatidylinositol phosphorylation	9	BP	9	3	0.0492
+GO:0048017	inositol lipid-mediated signaling	7	BP	6	3	0.0494
+GO:0000743	nuclear migration involved in conjugatio...	10	BP	4	2	0.0496
+GO:0071008	U2-type post-mRNA release spliceosomal c...	9	CC	4	2	0.0499
+GO:0031429	box H/ACA snoRNP complex	9	CC	4	2	0.0499
+GO:0005640	nuclear outer membrane	9	CC	4	2	0.0499
