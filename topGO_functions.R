@@ -6,6 +6,18 @@ library(ggplot2)
 
 ## load functions
 
+biomart_to_golist <- function(biomart_df){
+  #biomart_df : Ensembl Biomart functional annotation ouput file, read in as dataframe
+  go_df <- aggregate(goid~geneid, data=biomart_df, FUN='list')
+  structure(go_df$goid, .Names=go_df$geneid)
+}
+
+pannzer_to_golist <- function(pannzer_df){
+  #pannzer_df : Pannzer2 functional annotation output file, read in as dataframe
+  go_df <- aggregate(goid~qpid, data=pannzer_df, FUN=c)
+  structure(go_df$goid, .Names=go_df$qpid)
+}
+
 #get the list of interesting genes from the classes_df dataframe that are in the HEBl, HEBi and HER categories
 get_int_genes <- function(classes_df, gene_names){
   #classes_df : dataframe with one gene ID per row and expression category classifications for each gene
