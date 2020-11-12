@@ -105,36 +105,67 @@ To run the functions found in the file `topGO_functions.R`, you will need two in
   * One column containing all gene IDs that have a non-NA expression category classification
   * One column (named 'classification') containing the expression classification for each gene
 
-More information on how this dataframe can be made from raw read count data can be found at [this repository](https://github.com/annabehling/DEA_and_fit "github.com/annabehling/DEA_and_fit").
+More information on how this classification dataframe can be made from raw read count data can be found at [this repository](https://github.com/annabehling/DEA_and_fit "github.com/annabehling/DEA_and_fit").
 
-2. A list of background genes with GO annotations, in **gene2GO** format  
-  * Zero, one or many GO IDs are annotated to each gene
-  * The gene ID formats match those in the classification dataframe
+2. A file with GO term annotations for each gene (e.g. from [Pannzer2](http://ekhidna2.biocenter.helsinki.fi/sanspanz/ "Pannzer") or [Ensembl Biomart](https://www.ensembl.org/biomart/martview/9411b747344f748c4cc79534aa27827c "Biomart")).
 
 Examples of these input files can be found in `files/topGO_input`.
 
 ### Usage
 
-The `.txt` files can be read in using `read.table()`.
+First load the functions:
+```{r}
+source("topGO_functions.R")
+```
 
-First, make a sub-gene2GO list containing only genes with a non-NA expression classification:
+In this example we will use a homoploid hybrid (HH) plant Pannzer2 output file for GO annotations.
+```{r}
+go_anno <- read.table("files/topGO_input/pannzer_go_anno.out", 
+	quote='"', sep="\t", header=TRUE, colClasses = c("goid"="character", "qpid"="character"))
+```
+See `topGO_functions.R` for an analogous function for working with Biomart annotation data.
+
+Process the GO annotation file:
+```{r}
+go_anno_filt <- go_anno[(go_anno$ARGOT_PPV > 0.5), ] #filter for reliable annotations
+go_anno_filt$goid <- paste0("GO:", go_anno_filt$goid) #paste "GO:" to beginning of each GO ID
+```
+
+Read in the classification dataframe:
+```{r}
+sub_classes_df <- read.table("files/topGO_input/sub_classes_df.txt", header = TRUE)
+```
+
+Ensure that the format of the HH plant `sub_classes_df$$gene_id` matches the HH plant `go_anno_filt$qpid`:
+```
+go_anno_filt$qpid <- str_replace(go_anno_filt$qpid, "prot", "cds")
+```
+
+Make a list of background genes with GO annotations, in **gene2GO** format  
+  * Zero, one or many GO IDs are annotated to each gene
+```{r}
+gene2go_list <- pannzer_to_golist(go_anno_filt)
+```
+
+Make a sub-gene2GO list containing only genes with a non-NA expression classification:
 ```{r}
 sub_gene2go <- gene2go_list[sub_classes_df$gene_id]
 ```
 
-Next, make a character vector of all gene IDs that have a non-NA expression classification:
+Make a character vector of all gene IDs that have a non-NA expression classification:
 ```{r}
 gene_names <- names(sub_gene2go) 
 ```
 
-Then, to get the lists of interesting genes in HEBl, HEBi and HER, run:
+To get the lists of interesting genes in HEBl, HEBi and HER, run:
 ```{r}
 int_genes <- get_int_genes(sub_classes_df, gene_names)
 ```
+
 We can index the list to separate out the interesting genes in each of the categories, where
-`int_genes[[1]]` : HEBl genes
-`int_genes[[2]]` : HEBi genes
-`int_genes[[3]]` : HER genes
+* `int_genes[[1]]` : HEBl genes  
+* `int_genes[[2]]` : HEBi genes  
+* `int_genes[[3]]` : HER genes  
 
 Then, run the enrichment analyses in all ontologies with the indexed list of interesting genes as the foreground and the sub-gene2GO list as the background:
 ```{r}
@@ -142,6 +173,7 @@ hebl_topgo <- all_enriched(int_genes[[1]], sub_gene2go)
 hebi_topgo <- all_enriched(int_genes[[2]], sub_gene2go)
 her_topgo <- all_enriched(int_genes[[3]], sub_gene2go)
 ```
+
 We can then run the above analyses on all six of our hybrid species (the following example outputs of which are all available in `files/topGO_output`).
 * `allo_a_hebi_topgo.txt` : allopolyploid animals HEBi
 * `allo_a_hebl_topgo.txt` : allopolyploid animals HEBl
@@ -162,7 +194,12 @@ We can then run the above analyses on all six of our hybrid species (the followi
 * `hh_p_hebl_topgo.txt` : homoploid hybrid plants HEBl
 * `hh_p_her_topgo.txt` : homoploid hybrid plants HER
 
-Then to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, read in the example output files using `read.table()`, and then run:
+Read in the example output files using, e.g.
+```{r}
+hh_p_hebi_topgo <- read.table("files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t")
+```
+
+To make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, read in the example output files using `read.table()`, and then run:
 ```{r}
 topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               hh_f_hebi_topgo[hh_f_hebi_topgo$ontology == "BP", ],
@@ -179,3 +216,7 @@ The output should of these functions should match the following plot, which can 
 ![Image of topGO output plot](files/topGO_BP.png "topGO output plot")
 
 As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear that there are no terms common to every system.
+
+## Acknoledgements
+
+Thank you to [David Winter](https://github.com/dwinter "github.com/dwinter") for the `pannzer_to_golist()` code.
