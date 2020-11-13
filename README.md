@@ -17,7 +17,7 @@ Cox, M.P., T. Dong, G. Shen, Y. Dalvi, D.B. Scott and A.R.D. Ganley. 2014. An in
 
 ## Description
 
-The following code utilises two routes of gene ontology (GO) functional enrichment analysis - [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO").
+The following code utilises two routes of gene ontology (GO) functional enrichment analysis: [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO").
 
 ### DAVID 
 
@@ -28,7 +28,7 @@ DAVID enables GO enrichment analyses at specific GO levels (1-5).
 
 ### topGO
 
-topGO is an R package that can perform GO term enrichment analysis on functionally-annotated genes. Unlike in DAVID, the topGO GO enrichment analyses are level-independent.
+topGO is an R package that can perform GO term enrichment analysis on functionally-annotated genes. Unlike DAVID, the topGO GO enrichment analyses are level-independent.
 
 ## Installation
 
@@ -45,7 +45,7 @@ As DAVID functional enrichment analyses are performed through 'pointy-clicky' me
 
 To run the functions found in the file `DAVID_functions.R`, you will need a directory containing raw GO enrichment tables, downloaded from the DAVID bioinformatics resource.
 
-Example files from a DAVID GO term enrichment analysis among homeolog expression bias (HEBi) genes can be found in `files/DAVID_HEBi`.
+Example files from a DAVID GO term enrichment analysis of homeolog expression bias (HEBi) genes can be found in `files/DAVID_HEBi`.
 
 ### Usage
 
@@ -64,7 +64,7 @@ allo_a_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_animals") #allopolyp
 hh_a_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
 ```
 
-We then can check that all data files are present; we expect there to be 15 tables x 6 systems = 90 data tables total.  
+We then can check that all data files are present; we expect there to be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
 Even if some are empty, it is important that the total number of files are present so that the `go_cat` argument of the following plotting argument is accurate.
 ```{r}
 length(c(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_david, allo_a_hebi_david, hh_a_hebi_david)) #90
@@ -76,13 +76,17 @@ Specifically, file names must contain:
 * a reference to the GO ontology, either abbreviated (e.g. **bp**), or in full (e.g. **biological process**) - as a primary means of indexing the file names
 * a reference to the GO level (e.g. **1 - 5**) - as a secondary means of indexing the file names
 
-To plot the cross-kingdom results of the functional enrichment analysis at a given GO ontology level, run:
+The `go_cat` argument accepts a number from 1-15, reflecting the alphabetical ordering of the file names:
+* **1-5** : biological process, level 1-5
+* **6-10** : cellular component, level 1-5
+* **11-15** : molecular function, level 1-5
+
+To plot the cross-kingdom results of the functional enrichment analysis of HEBi genes in the biological process ontology, level 2, run:
 ```{r}
 GO_scatter(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_david, allo_a_hebi_david, hh_a_hebi_david, go_cat = 2, 
            y_label = "GO term (Biological Process level 2)")
 ```
 
-In this example code, we have plotted biological process level 2, in the HEBi category.  
 The output should of these functions should match the following plot, which can also be found as an example output file in `files/DAVID_BP_2.png`.
 
 ![Image of DAVID output plot](files/DAVID_BP_2.png "DAVID output plot")  
@@ -105,7 +109,7 @@ To run the functions found in the file `topGO_functions.R`, you will need two in
   * One column containing all gene IDs that have a non-NA expression category classification
   * One column (named 'classification') containing the expression classification for each gene
 
-More information on how this classification dataframe can be made from raw read count data can be found at [this repository](https://github.com/annabehling/DEA_and_fit "github.com/annabehling/DEA_and_fit").
+More information on how this classification dataframe can be made from raw read count data can be found in [this repository](https://github.com/annabehling/DEA_and_fit "github.com/annabehling/DEA_and_fit").
 
 2. A file with GO term annotations for each gene (e.g. from [Pannzer2](http://ekhidna2.biocenter.helsinki.fi/sanspanz/ "Pannzer") or [Ensembl Biomart](https://www.ensembl.org/biomart/martview/9411b747344f748c4cc79534aa27827c "Biomart")).
 
@@ -119,11 +123,11 @@ source("topGO_functions.R")
 ```
 
 In this example we will use a homoploid hybrid (HH) plant Pannzer2 output file for GO annotations.
+(See `topGO_functions.R` for an analogous function for working with Biomart annotation data.)
 ```{r}
 go_anno <- read.table("files/topGO_input/pannzer_go_anno.out", 
 	quote='"', sep="\t", header=TRUE, colClasses = c("goid"="character", "qpid"="character"))
 ```
-See `topGO_functions.R` for an analogous function for working with Biomart annotation data.
 
 Process the GO annotation file:
 ```{r}
@@ -141,7 +145,7 @@ Ensure that the format of the HH plant `sub_classes_df$$gene_id` matches the HH 
 go_anno_filt$qpid <- str_replace(go_anno_filt$qpid, "prot", "cds")
 ```
 
-Make a list of background genes with GO annotations, in **gene2GO** format  
+Make a list of background genes with GO annotations, in **gene2GO** format:  
   * Zero, one or many GO IDs are annotated to each gene
 ```{r}
 gene2go_list <- pannzer_to_golist(go_anno_filt)
@@ -157,12 +161,13 @@ Make a character vector of all gene IDs that have a non-NA expression classifica
 gene_names <- names(sub_gene2go) 
 ```
 
-To get the lists of interesting genes in HEBl, HEBi and HER, run:
+To get the lists of interesting genes in the HEBl, HEBi and HER, run:
 ```{r}
 int_genes <- get_int_genes(sub_classes_df, gene_names)
 ```
+We won't perform an enrichment analysis of the PEI category, due to the high number of genes that are classified as PEI; it is difficult to test for enrichment when the subset of genes comprises the majority of the background.
 
-We can index the list to separate out the interesting genes in each of the categories, where
+We can index the list to separate out the interesting genes in each of the categories, where:
 * `int_genes[[1]]` : HEBl genes  
 * `int_genes[[2]]` : HEBi genes  
 * `int_genes[[3]]` : HER genes  
@@ -199,7 +204,7 @@ Read in the example output files using, e.g.
 hh_p_hebi_topgo <- read.table("files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t")
 ```
 
-To make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, read in the example output files using `read.table()`, and then run:
+Then, to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, run:
 ```{r}
 topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               hh_f_hebi_topgo[hh_f_hebi_topgo$ontology == "BP", ],
@@ -210,12 +215,12 @@ topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               y_label = "GO term (Biological Process)")
 ```
 
-In this example code, we have plotted biological process, in the HEBi category.
+In this example code, we have plotted enrichment of biological process, in the HEBi category.
 The output should of these functions should match the following plot, which can also be found as an example output file in `files/topGO_BP.png`.
 
 ![Image of topGO output plot](files/topGO_BP.png "topGO output plot")
 
-As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear that there are no terms common to every system.
+As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear to have reached the same conclusion as the DAVID results: no GO terms common to every system.
 
 ## Acknoledgements
 
