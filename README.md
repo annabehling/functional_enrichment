@@ -201,7 +201,7 @@ We can then run the above analyses on all six of our hybrid species (the followi
 
 Read in the example output files using, e.g.
 ```{r}
-hh_p_hebi_topgo <- read.table("files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t")
+hh_p_hebi_topgo <- read.table("files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
 ```
 
 Then, to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, run:
