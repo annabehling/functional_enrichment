@@ -83,13 +83,13 @@ topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh
                        allo_p_topgo_out, hh_p_topgo_out,
                        allo_a_topgo_out, hh_a_topgo_out)
   
-  scatter_tab$neglog10_p <- -log10(as.numeric(as.character(scatter_tab$`p value`))) #important to do as.character for as.numeric
+  scatter_tab$neglog10_p <- -log10(as.numeric(as.character(scatter_tab$`p.value`))) #important to do as.character for as.numeric
   
   ggplot(data = scatter_tab,
-         mapping = aes(y=`GO term`,
+         mapping = aes(y=`GO.term`,
                        x=factor(system, levels=c("allo fungi", "HH fungi", "allo plants", "HH plants", "allo animals", "HH animals")),
                        color=`neglog10_p`,
-                       size=`subset count`)) +
+                       size=`subset.count`)) +
     scale_x_discrete(drop=F) +
     geom_point() +
     scale_color_gradient(low="blue", high="red") +
