@@ -4,16 +4,20 @@ Functional enrichment analyses can be used to identify an over-representation of
 
 In this instance, we are investigating the evolution of hybrid gene expression, so the subset of interesting genes are those with a particular expression pattern, relative to their parental species.
 
-Briefly, the four possible categories for hybrid gene expression are:
+Briefly, the five possible categories for hybrid gene expression are:
 
-1. **Parental expression inheritance** (PEI): any parental bias (or lack thereof) is maintained in the hybrid.
-2. **Homeolog expression blending** (HEBl): a parental expression bias is lost in the hybrid.
-3. **Homeolog expression bias** (HEBi): a hybrid expression bias has arisen from no parental bias.
-4. **Homeolog expression reversal** (HER): an expression bias in the parents is reversed in the hybrid.
+1. **Parental differential expression inheritance** (PEI de): a parental expression bias is maintained in the hybrid.
+2. **Parental equal expression inheritance** (PEI eq) : equal parental expression is inherited as such by the hybrid.
+3. **Homeolog expression blending** (HEBl): a parental expression bias is lost in the hybrid.
+4. **Homeolog expression bias** (HEBi): a hybrid expression bias has arisen from no parental bias.
+5. **Homeolog expression reversal** (HER): an expression bias in the parents is reversed in the hybrid.
 
-More information on these classes can be found in the following publication:
+More information on these classes can be found in the following publications:
 
 Cox, M.P., T. Dong, G. Shen, Y. Dalvi, D.B. Scott and A.R.D. Ganley. 2014. An interspecific fungal hybrid reveals cross-kingdom rules for allopolyploid gene expression patterns. *PLoS Genetics* 10: e1004180. [https://doi.org/10.1371/journal.pgen.1004180](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004180)
+
+Yoo, M.J., Szadkowski, E., & Wendel, J.F. 2013. Homeolog expression bias and expression level dominance in allopolyploid cotton. *Heredity* 110: 171-180. [https://doi.org/10.1038/hdy.2012.94](https://www.nature.com/articles/hdy201294)
+
 
 ## Description
 
