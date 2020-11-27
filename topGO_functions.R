@@ -31,7 +31,10 @@ get_int_genes <- function(classes_df, gene_names){
   HER_geneList <- factor(as.integer(classes_df$classification == "HER")) #get HER genes
   names(HER_geneList) <- gene_names
   
-  list(HEBl_geneList, HEBi_geneList, HER_geneList)
+  PEIde_geneList <- factor(as.integer(classes_df$classification == "PEI de"))
+  names(PEIde_geneList) <- gene_names
+  
+  list(HEBl_geneList, HEBi_geneList, HER_geneList, PEIde_geneList)
 }
 
 #make the topGO data object
