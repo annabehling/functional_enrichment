@@ -141,7 +141,7 @@ go_anno_filt$goid <- paste0("GO:", go_anno_filt$goid) #paste "GO:" to beginning 
 
 Read in the classification dataframe:
 ```{r}
-sub_classes_df <- read.table("files/topGO_input/sub_classes_df.txt", header = TRUE)
+sub_classes_df <- read.table("files/topGO_input/sub_classes_df.txt", sep = "\t", header = TRUE)
 ```
 
 Ensure that the format of the HH plant `sub_classes_df$$gene_id` matches the HH plant `go_anno_filt$qpid`:
@@ -175,33 +175,41 @@ We can index the list to separate out the interesting genes in each of the categ
 * `int_genes[[1]]` : HEBl genes  
 * `int_genes[[2]]` : HEBi genes  
 * `int_genes[[3]]` : HER genes  
+* `int_genes[[4]]` : PEI de genes
 
 Then, run the enrichment analyses in all ontologies with the indexed list of interesting genes as the foreground and the sub-gene2GO list as the background:
 ```{r}
 hebl_topgo <- all_enriched(int_genes[[1]], sub_gene2go)
 hebi_topgo <- all_enriched(int_genes[[2]], sub_gene2go)
 her_topgo <- all_enriched(int_genes[[3]], sub_gene2go)
+peide_topgo <- all_enriched(int_genes[[4]], sub_gene2go)
 ```
 
 We can then run the above analyses on all six of our hybrid species (the following example outputs of which are all available in `files/topGO_output`).
 * `allo_a_hebi_topgo.txt` : allopolyploid animals HEBi
 * `allo_a_hebl_topgo.txt` : allopolyploid animals HEBl
 * `allo_a_her_topgo.txt` : allopolyploid animals HER
+* `allo_a_peide_topgo.txt` : allopolyploid animals PEI de
 * `allo_f_hebi_topgo.txt` : allopolyploid fungi HEBi
 * `allo_f_hebl_topgo.txt` : allopolyploid fungi HEBl
 * `allo_f_her_topgo.txt` : allopolyploid fungi HER
+* `allo_f_peide_topgo.txt` : allopolyploid fungi PEI de
 * `allo_p_hebi_topgo.txt` : allopolyploid plants HEBi
 * `allo_p_hebl_topgo.txt` : allopolyploid plants HEBl
 * `allo_p_her_topgo.txt` : allopolyploid plants HER
+* `allo_p_peide_topgo.txt` : allopolyploid plants PEI de
 * `hh_a_hebi_topgo.txt` : homoploid hybrid animals HEBi
 * `hh_a_hebl_topgo.txt` : homoploid hybrid animals HEBl
 * `hh_a_her_topgo.txt` : homoploid hybrid animals HER
+* `hh_a_peide_topgo.txt` : homoploid hybrid animals PEI de
 * `hh_f_hebi_topgo.txt` : homoploid hybrid fungi HEBi
 * `hh_f_hebl_topgo.txt` : homoploid hybrid fungi HEBl
 * `hh_f_her_topgo.txt` : homoploid hybrid fungi HER
+* `hh_f_peide_topgo.txt` : homoploid hybrid fungi PEI de
 * `hh_p_hebi_topgo.txt` : homoploid hybrid plants HEBi
 * `hh_p_hebl_topgo.txt` : homoploid hybrid plants HEBl
 * `hh_p_her_topgo.txt` : homoploid hybrid plants HER
+* `hh_p_peide_topgo.txt` : homoploid hybrid plants PEI de
 
 Read in the example output files using, e.g.
 ```{r}
