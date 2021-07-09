@@ -1,0 +1,17 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+GOTERM_BP_3	GO:0010646~regulation of cell communication	1	5.0	1.0	XM_007823046	4	12	1665	34.6875	1.0	1.0	1.0
+GOTERM_BP_3	GO:0006790~sulfur compound metabolic process	1	5.0	1.0	XM_007820633	4	34	1665	12.24264705882353	1.0	1.0	1.0
+GOTERM_BP_3	GO:0044255~cellular lipid metabolic process	1	5.0	1.0	XM_007824093	4	73	1665	5.702054794520548	1.0	1.0	1.0
+GOTERM_BP_3	GO:1901575~organic substance catabolic process	1	5.0	1.0	XM_007823085	4	129	1665	3.2267441860465116	1.0	1.0	1.0
+GOTERM_BP_3	GO:0007154~cell communication	1	5.0	1.0	XM_007823046	4	88	1665	4.730113636363637	1.0	1.0	1.0
+GOTERM_BP_3	GO:0009966~regulation of signal transduction	1	5.0	1.0	XM_007823046	4	12	1665	34.6875	1.0	1.0	1.0
+GOTERM_BP_3	GO:0006082~organic acid metabolic process	1	5.0	1.0	XM_007824093	4	200	1665	2.08125	1.0	1.0	1.0
+GOTERM_BP_3	GO:0044249~cellular biosynthetic process	1	5.0	1.0	XM_007824093	4	580	1665	0.7176724137931035	1.0	1.0	1.0
+GOTERM_BP_3	GO:0044711~single-organism biosynthetic process	1	5.0	1.0	XM_007824093	4	205	1665	2.0304878048780486	1.0	1.0	1.0
+GOTERM_BP_3	GO:0006575~cellular modified amino acid metabolic process	1	5.0	1.0	XM_007820633	4	16	1665	26.015625	1.0	1.0	1.0
+GOTERM_BP_3	GO:1901576~organic substance biosynthetic process	1	5.0	1.0	XM_007824093	4	582	1665	0.7152061855670103	1.0	1.0	1.0
+GOTERM_BP_3	GO:0044281~small molecule metabolic process	1	5.0	1.0	XM_007824093	4	314	1665	1.325636942675159	1.0	1.0	1.0
+GOTERM_BP_3	GO:1901564~organonitrogen compound metabolic process	1	5.0	1.0	XM_007820633	4	366	1665	1.1372950819672132	1.0	1.0	1.0
+GOTERM_BP_3	GO:0006629~lipid metabolic process	1	5.0	1.0	XM_007824093	4	106	1665	3.9268867924528306	1.0	1.0	1.0
+GOTERM_BP_3	GO:0034641~cellular nitrogen compound metabolic process	1	5.0	1.0	XM_007820633	4	652	1665	0.6384202453987731	1.0	1.0	1.0
+GOTERM_BP_3	GO:0005975~carbohydrate metabolic process	1	5.0	1.0	XM_007823085	4	131	1665	3.177480916030534	1.0	1.0	1.0

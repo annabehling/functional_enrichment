@@ -1,0 +1,14 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+GOTERM_BP_4	GO:0006575~cellular modified amino acid metabolic process	1	5.0	1.0	XM_007820633	4	16	1539	24.046875	1.0	1.0	1.0
+GOTERM_BP_4	GO:0008610~lipid biosynthetic process	1	5.0	1.0	XM_007824093	4	55	1539	6.995454545454546	1.0	1.0	1.0
+GOTERM_BP_4	GO:0006631~fatty acid metabolic process	1	5.0	1.0	XM_007824093	4	21	1539	18.321428571428573	1.0	1.0	1.0
+GOTERM_BP_4	GO:0016052~carbohydrate catabolic process	1	5.0	1.0	XM_007823085	4	24	1539	16.03125	1.0	1.0	1.0
+GOTERM_BP_4	GO:0043603~cellular amide metabolic process	1	5.0	1.0	XM_007820633	4	146	1539	2.63527397260274	1.0	1.0	1.0
+GOTERM_BP_4	GO:0044283~small molecule biosynthetic process	1	5.0	1.0	XM_007824093	4	107	1539	3.5957943925233646	1.0	1.0	1.0
+GOTERM_BP_4	GO:0009966~regulation of signal transduction	1	5.0	1.0	XM_007823046	4	12	1539	32.0625	1.0	1.0	1.0
+GOTERM_BP_4	GO:0044255~cellular lipid metabolic process	1	5.0	1.0	XM_007824093	4	73	1539	5.27054794520548	1.0	1.0	1.0
+GOTERM_BP_4	GO:0006749~glutathione metabolic process	1	5.0	1.0	XM_007820633	4	7	1539	54.964285714285715	1.0	1.0	1.0
+GOTERM_BP_4	GO:0006518~peptide metabolic process	1	5.0	1.0	XM_007820633	4	144	1539	2.671875	1.0	1.0	1.0
+GOTERM_BP_4	GO:0043436~oxoacid metabolic process	1	5.0	1.0	XM_007824093	4	177	1539	2.1737288135593222	1.0	1.0	1.0
+GOTERM_BP_4	GO:0016053~organic acid biosynthetic process	1	5.0	1.0	XM_007824093	4	81	1539	4.75	1.0	1.0	1.0
+GOTERM_BP_4	GO:0006082~organic acid metabolic process	1	5.0	1.0	XM_007824093	4	200	1539	1.92375	1.0	1.0	1.0

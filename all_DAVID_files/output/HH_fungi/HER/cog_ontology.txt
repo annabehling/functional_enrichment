@@ -1,0 +1,6 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+COG_ONTOLOGY	Cell envelope biogenesis, outer membrane / Carbohydrate transport and metabolism	1	2.564102564102564	1.0	NM_001183405	6	4	783	32.62499999999999	1.0	1.0	1.0
+COG_ONTOLOGY	Coenzyme metabolism	1	2.564102564102564	1.0	NM_001178432	6	22	783	5.931818181818182	1.0	1.0	1.0
+COG_ONTOLOGY	Translation, ribosomal structure and biogenesis	1	2.564102564102564	1.0	NM_001184139	6	55	783	2.3727272727272726	1.0	1.0	1.0
+COG_ONTOLOGY	DNA replication, recombination, and repair	1	2.564102564102564	1.0	NM_001179102	6	41	783	3.1829268292682924	1.0	1.0	1.0
+COG_ONTOLOGY	Chromatin structure and dynamics	1	2.564102564102564	1.0	NM_001182740	6	9	783	14.5	1.0	1.0	1.0

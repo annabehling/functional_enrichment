@@ -1,0 +1,10 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+GOTERM_BP_5	GO:0019752~carboxylic acid metabolic process	1	5.0	1.0	XM_007824093	3	173	1465	2.822736030828516	1.0	1.0	1.0
+GOTERM_BP_5	GO:0043436~oxoacid metabolic process	1	5.0	1.0	XM_007824093	3	177	1465	2.75894538606403	1.0	1.0	1.0
+GOTERM_BP_5	GO:0006631~fatty acid metabolic process	1	5.0	1.0	XM_007824093	3	21	1465	23.253968253968253	1.0	1.0	1.0
+GOTERM_BP_5	GO:0046394~carboxylic acid biosynthetic process	1	5.0	1.0	XM_007824093	3	74	1465	6.599099099099099	1.0	1.0	1.0
+GOTERM_BP_5	GO:0006518~peptide metabolic process	1	5.0	1.0	XM_007820633	3	144	1465	3.3912037037037037	1.0	1.0	1.0
+GOTERM_BP_5	GO:0006633~fatty acid biosynthetic process	1	5.0	1.0	XM_007824093	3	19	1465	25.70175438596491	1.0	1.0	1.0
+GOTERM_BP_5	GO:0006749~glutathione metabolic process	1	5.0	1.0	XM_007820633	3	7	1465	69.76190476190476	1.0	1.0	1.0
+GOTERM_BP_5	GO:0016053~organic acid biosynthetic process	1	5.0	1.0	XM_007824093	3	81	1465	6.0288065843621395	1.0	1.0	1.0
+GOTERM_BP_5	GO:0009966~regulation of signal transduction	1	5.0	1.0	XM_007823046	3	12	1465	40.69444444444444	1.0	1.0	1.0

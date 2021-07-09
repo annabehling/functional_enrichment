@@ -1,0 +1,4 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+COG_ONTOLOGY	Secondary metabolites biosynthesis, transport, and catabolism	2	4.651162790697675	0.33912294281759225	NP_001001730, XP_005157908	5	15	154	4.1066666666666665	0.7113563379253551	1.0	1.0
+COG_ONTOLOGY	Energy production and conversion	1	2.3255813953488373	1.0	NP_001008645	5	10	154	3.0800000000000005	1.0	1.0	1.0
+COG_ONTOLOGY	Posttranslational modification, protein turnover, chaperones	1	2.3255813953488373	1.0	NP_957099	5	11	154	2.8000000000000003	1.0	1.0	1.0

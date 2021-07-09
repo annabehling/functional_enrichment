@@ -1,0 +1,4 @@
+Category	Term	Count	%	PValue	Genes	List Total	Pop Hits	Pop Total	Fold Enrichment	Bonferroni	Benjamini	FDR
+GOTERM_CC_5	GO:0043229~intracellular organelle	1	5.0	1.0	XM_007824898	1	731	1000	1.3679890560875514	1.0	1.0	1.0
+GOTERM_CC_5	GO:0043231~intracellular membrane-bounded organelle	1	5.0	1.0	XM_007824898	1	575	1000	1.7391304347826089	1.0	1.0	1.0
+GOTERM_CC_5	GO:0005634~nucleus	1	5.0	1.0	XM_007824898	1	367	1000	2.7247956403269757	1.0	1.0	1.0
