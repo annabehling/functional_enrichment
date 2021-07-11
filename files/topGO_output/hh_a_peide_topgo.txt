@@ -1,0 +1,23 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0031994	insulin-like growth factor I binding	6	MF	3	3	0.00048
+GO:0004411	homogentisate 1,2-dioxygenase activity	6	MF	3	3	0.00048
+GO:0006570	tyrosine metabolic process	9	BP	4	3	0.0018
+GO:0001558	regulation of cell growth	6	BP	4	3	0.0018
+GO:0007229	integrin-mediated signaling pathway	7	BP	5	3	0.0043
+GO:0006559	L-phenylalanine catabolic process	11	BP	5	3	0.0043
+GO:0005784	Sec61 translocon complex	10	CC	2	2	0.0043
+GO:0031995	insulin-like growth factor II binding	6	MF	2	2	0.00614
+GO:0030864	cortical actin cytoskeleton	8	CC	3	2	0.0124
+GO:0043265	ectoplasm	4	CC	3	2	0.0124
+GO:0055114	oxidation-reduction process	3	BP	204	25	0.0173
+GO:0004069	L-aspartate:2-oxoglutarate aminotransfer...	6	MF	3	2	0.01746
+GO:0004602	glutathione peroxidase activity	6	MF	3	2	0.01746
+GO:0006811	ion transport	5	BP	62	4	0.0183
+GO:0044106	cellular amine metabolic process	6	BP	63	10	0.0227
+GO:0031419	cobalamin binding	5	MF	4	2	0.03313
+GO:0004373	glycogen (starch) synthase activity	8	MF	4	2	0.03313
+GO:0009749	response to glucose	8	BP	4	2	0.0334
+GO:0005923	bicellular tight junction	7	CC	5	2	0.0379
+GO:0004867	serine-type endopeptidase inhibitor acti...	7	MF	17	4	0.03891
+GO:0006520	cellular amino acid metabolic process	7	BP	64	11	0.0457
+GO:0003755	peptidyl-prolyl cis-trans isomerase acti...	5	MF	11	3	0.04913
