@@ -1,0 +1,47 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0003735	structural constituent of ribosome	3	MF	423	184	1.4e-12
+GO:0006412	translation	8	BP	661	241	2.9e-11
+GO:0005840	ribosome	6	CC	467	197	2.5e-10
+GO:0009536	plastid	6	CC	606	204	4.0e-05
+GO:0031984	organelle subcompartment	5	CC	231	77	0.00037
+GO:0042651	thylakoid membrane	5	CC	164	62	0.00084
+GO:0019773	proteasome core complex, alpha-subunit c...	8	CC	16	11	0.00091
+GO:0047134	protein-disulfide reductase activity	6	MF	5	5	0.0017
+GO:0048038	quinone binding	4	MF	13	9	0.0024
+GO:0030042	actin filament depolymerization	10	BP	10	7	0.0028
+GO:0019843	rRNA binding	6	MF	85	36	0.0032
+GO:0045263	proton-transporting ATP synthase complex...	7	CC	10	6	0.00643
+GO:0019684	photosynthesis, light reaction	5	BP	80	35	0.0065
+GO:0003700	DNA-binding transcription factor activit...	3	MF	163	56	0.0073
+GO:0010499	proteasomal ubiquitin-independent protei...	10	BP	17	10	0.0086
+GO:0008137	NADH dehydrogenase (ubiquinone) activity	7	MF	15	9	0.0094
+GO:0000463	maturation of LSU-rRNA from tricistronic...	12	BP	20	11	0.0114
+GO:0015629	actin cytoskeleton	7	CC	28	13	0.01548
+GO:0004819	glutamine-tRNA ligase activity	6	MF	3	3	0.0220
+GO:0046404	ATP-dependent polydeoxyribonucleotide 5'...	9	MF	3	3	0.0220
+GO:0071568	UFM1 transferase activity	5	MF	3	3	0.0220
+GO:0004298	threonine-type endopeptidase activity	7	MF	30	14	0.0225
+GO:0000275	mitochondrial proton-transporting ATP sy...	12	CC	3	3	0.02274
+GO:1905360	GTPase complex	4	CC	3	3	0.02274
+GO:0031234	extrinsic component of cytoplasmic side ...	7	CC	3	3	0.02274
+GO:0015969	guanosine tetraphosphate metabolic proce...	11	BP	3	3	0.0232
+GO:1990564	protein polyufmylation	11	BP	3	3	0.0232
+GO:0006425	glutaminyl-tRNA aminoacylation	12	BP	3	3	0.0232
+GO:0070932	histone H3 deacetylation	11	BP	3	3	0.0232
+GO:0009504	cell plate	4	CC	5	4	0.02489
+GO:0045901	positive regulation of translational elo...	11	BP	5	4	0.0255
+GO:0045905	positive regulation of translational ter...	11	BP	5	4	0.0255
+GO:0000380	alternative mRNA splicing, via spliceoso...	13	BP	48	11	0.0257
+GO:0045156	electron transporter, transferring elect...	5	MF	12	7	0.0267
+GO:0006754	ATP biosynthetic process	12	BP	30	14	0.0329
+GO:0006355	regulation of transcription, DNA-templat...	11	BP	466	136	0.0344
+GO:0061631	ubiquitin conjugating enzyme activity	6	MF	43	18	0.0352
+GO:0009409	response to cold	5	BP	26	12	0.0383
+GO:0016168	chlorophyll binding	5	MF	29	13	0.0391
+GO:0045116	protein neddylation	10	BP	8	5	0.0471
+GO:0009853	photorespiration	5	BP	8	5	0.0471
+GO:0008643	carbohydrate transport	6	BP	16	7	0.0471
+GO:0042273	ribosomal large subunit biogenesis	7	BP	88	39	0.0473
+GO:0032502	developmental process	2	BP	352	96	0.0478
+GO:0000027	ribosomal large subunit assembly	9	BP	39	17	0.0498
+GO:0051537	2 iron, 2 sulfur cluster binding	5	MF	27	12	0.0499

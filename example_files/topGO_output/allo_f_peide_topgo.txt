@@ -1,0 +1,21 @@
+GO ID	GO term	level	ontology	background count	subset count	p value
+GO:0055114	oxidation-reduction process	3	BP	451	57	0.00014
+GO:0030245	cellulose catabolic process	10	BP	5	4	0.00023
+GO:0005576	extracellular region	3	CC	18	6	0.00094
+GO:0006979	response to oxidative stress	4	BP	31	7	0.00193
+GO:0102483	scopolin beta-glucosidase activity	6	MF	4	3	0.0028
+GO:0032259	methylation	3	BP	130	18	0.00328
+GO:0004601	peroxidase activity	5	MF	11	5	0.0035
+GO:0016491	oxidoreductase activity	3	MF	466	59	0.0063
+GO:0008422	beta-glucosidase activity	7	MF	5	3	0.0065
+GO:0044550	secondary metabolite biosynthetic proces...	4	BP	7	3	0.00699
+GO:0097367	carbohydrate derivative binding	3	MF	632	46	0.0090
+GO:0098869	cellular oxidant detoxification	7	BP	23	6	0.01064
+GO:0008234	cysteine-type peptidase activity	6	MF	35	5	0.0134
+GO:0004540	ribonuclease activity	6	MF	40	8	0.0182
+GO:0090501	RNA phosphodiester bond hydrolysis	8	BP	54	9	0.01858
+GO:0020037	heme binding	5	MF	54	10	0.0216
+GO:0019825	oxygen binding	4	MF	3	2	0.0233
+GO:0019120	hydrolase activity, acting on acid halid...	5	MF	3	2	0.0233
+GO:0071949	FAD binding	7	MF	28	6	0.0366
+GO:0006166	purine ribonucleoside salvage	11	BP	4	2	0.03757
