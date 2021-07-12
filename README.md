@@ -57,6 +57,7 @@ First load the functions:
 ```{r}
 source("DAVID_functions.R")
 ```
+These have been tested to work on R version 4.0.3. 
 
 To read in and filter all of the example enrichment tables, applying a *p* value threshold of 0.05, run:
 ```{r}
@@ -233,6 +234,23 @@ The output should of these functions should match the following plot, which can 
 ![Image of topGO output plot](files/topGO_BP.png "topGO output plot")
 
 As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear to have reached the same conclusion as the DAVID results: no GO terms common to every system.
+
+## Additional data availability
+
+This repository also contains all input foreground and background gene lists used in the DAVID functional enrichment analyses of all representative systems in the associated research project, in addition to the subsequent output files. These can be found [here](https://github.com/annabehling/functional_enrichment/tree/master/all_DAVID_files "all_DAVID_files/").
+
+More specifically, the `all_DAVID_files/` folder contains one `input_background/` file and four `input_genelists/` files for a representative system from each of:
+
+* allopolyploid fungi (file suffix 'allo_f')
+* homoploid hybrid fungi (file suffix 'HH_f')
+* allopolyploid plants (file suffix 'allo_p')
+* homoploid hybrid plants (file suffix 'HH_p')
+* allopolyploid animals (file suffix 'allo_a')
+* homoploid hybrid animals (file suffix 'HH_a')
+
+The `all_DAVID_files/` folder also contains all GO (level 1-5), KEGG, COG and UniProt keyword output files produced from the DAVID functional enrichment analyses. These are organised firstly by representative system, and secondly by expression category.
+
+More information about the raw genomic and RNA-seq data used to generate the input gene lists can be found [here].
 
 ## Acknoledgements
 
