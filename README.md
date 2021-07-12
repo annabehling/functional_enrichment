@@ -49,7 +49,7 @@ As DAVID functional enrichment analyses are performed through 'pointy-clicky' me
 
 To run the functions found in the file `DAVID_functions.R`, you will need a directory containing raw GO enrichment tables, downloaded from the DAVID bioinformatics resource.
 
-Example files from a DAVID GO term enrichment analysis of homeolog expression bias (HEBi) genes can be found in `files/DAVID_HEBi`.
+Example files from a DAVID GO term enrichment analysis of homeolog expression bias (HEBi) genes can be found in `example_files/DAVID_HEBi`.
 
 ### Usage
 
@@ -60,12 +60,12 @@ source("DAVID_functions.R")
 
 To read in and filter all of the example enrichment tables, applying a *p* value threshold of 0.05, run:
 ```{r}
-allo_f_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_fungi") #allopolyploid fungi
-hh_f_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_fungi") #homoploid hybrid fungi
-allo_p_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_plants") #allopolyploid plants
-hh_p_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_plants") #homoploid hybrid plants
-allo_a_hebi_david <- read_david_go("./files/DAVID_HEBi/allo_animals") #allopolyploid animals
-hh_a_hebi_david <- read_david_go("./files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
+allo_f_hebi_david <- read_david_go("./example_files/DAVID_HEBi/allo_fungi") #allopolyploid fungi
+hh_f_hebi_david <- read_david_go("./example_files/DAVID_HEBi/HH_fungi") #homoploid hybrid fungi
+allo_p_hebi_david <- read_david_go("./example_files/DAVID_HEBi/allo_plants") #allopolyploid plants
+hh_p_hebi_david <- read_david_go("./example_files/DAVID_HEBi/HH_plants") #homoploid hybrid plants
+allo_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/allo_animals") #allopolyploid animals
+hh_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
 ```
 
 We then can check that all data files are present; we expect there to be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
