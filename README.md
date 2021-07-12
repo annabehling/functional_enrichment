@@ -21,7 +21,7 @@ Yoo, M.J., Szadkowski, E., & Wendel, J.F. 2013. Homeolog expression bias and exp
 
 ## Description
 
-The following code utilises two routes of gene ontology (GO) functional enrichment analysis: [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO").
+The following code utilises two routes of gene ontology (GO) functional enrichment analysis: [DAVID bioinformatics resource](https://david.ncifcrf.gov/summary.jsp "DAVID") and [topGO](https://bioconductor.org/packages/release/bioc/vignettes/topGO/inst/doc/topGO.pdf "topGO"). The code has been tested to work on R version 4.0.3. 
 
 ### DAVID 
 
@@ -57,7 +57,6 @@ First load the functions:
 ```{r}
 source("DAVID_functions.R")
 ```
-These have been tested to work on R version 4.0.3. 
 
 To read in and filter all of the example enrichment tables, applying a *p* value threshold of 0.05, run:
 ```{r}
