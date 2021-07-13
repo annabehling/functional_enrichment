@@ -249,7 +249,7 @@ More specifically, the `all_DAVID_files/` folder contains one `input_background/
 
 The `all_DAVID_files/` folder also contains all GO (level 1-5), KEGG, COG and UniProt keyword output files produced from the DAVID functional enrichment analyses. These are organised firstly by representative system, and secondly by expression category.
 
-More information about the raw genomic and RNA-seq data used to generate the input gene lists can be found [here].
+More information about the raw genomic and RNA-seq data used to generate the input gene lists can be found in Supplementary File 2, [here](https://github.com/annabehling/masters_supplementary "masters_supplementary").
 
 ## Acknoledgements
 
