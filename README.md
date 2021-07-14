@@ -6,11 +6,11 @@ In this instance, we are investigating the evolution of hybrid gene expression, 
 
 Briefly, the five possible categories for hybrid gene expression are:
 
-1. **Parental differential expression inheritance** (PEI de): a parental expression bias is maintained in the hybrid.
-2. **Parental equal expression inheritance** (PEI eq) : equal parental expression is inherited as such by the hybrid.
-3. **Homeolog expression blending** (HEBl): a parental expression bias is lost in the hybrid.
-4. **Homeolog expression bias** (HEBi): a hybrid expression bias has arisen from no parental bias.
-5. **Homeolog expression reversal** (HER): an expression bias in the parents is reversed in the hybrid.
+1. **Parental differential expression inheritance** (PEI de) : a parental expression bias is maintained in the hybrid.
+2. **Parental equal expression inheritance** (PEI eq) : equal parental expression is inherited by the hybrid.
+3. **Homeolog expression blending** (HEBl) : a parental expression bias is lost in the hybrid.
+4. **Homeolog expression bias** (HEBi) : a hybrid expression bias has arisen from no parental bias.
+5. **Homeolog expression reversal** (HER) : an expression bias in the parents is reversed in the hybrid.
 
 More information on these classes can be found in the following publications:
 
@@ -25,14 +25,13 @@ The following code utilises two routes of gene ontology (GO) functional enrichme
 
 ### DAVID 
 
-DAVID is an online tool that can perform functional annotation and functional enrichment analyses. It requires the user to submit a gene list with particular sequence identifiers, and gives the user the possibility of submitting a background gene list, or using the species background provided by the DAVID knowledgebase. Species must be present in the DAVID knowledgebase for usage of the tool.
+DAVID is an online tool that can perform functional annotation and functional enrichment analyses. It requires the user to submit a gene list with particular sequence identifiers, and gives the user the possibility of submitting a background gene list, or using the species background provided by the DAVID knowledgebase. Species must be present in the DAVID knowledgebase for usage of the tool. Results of the enrichment analyses can then be downloaded as `.txt` files.  
 
-Results of the enrichment analyses can then be downloaded as `.txt` files.  
-DAVID enables GO enrichment analyses at specific GO levels (1-5). 
+DAVID enables GO enrichment analyses at specific GO levels (biological process, cellular component, molecular function ontologies level 1-5). 
 
 ### topGO
 
-topGO is an R package that can perform GO term enrichment analysis on functionally-annotated genes. Unlike DAVID, the topGO GO enrichment analyses are level-independent.
+topGO is an R package that can perform GO enrichment analyses on functionally-annotated genes. Unlike DAVID, the topGO GO enrichment analyses are level-independent.
 
 ## Installation
 
@@ -51,6 +50,17 @@ To run the functions found in the file `DAVID_functions.R`, you will need a dire
 
 Example files from a DAVID GO term enrichment analysis of homeolog expression bias (HEBi) genes can be found in `example_files/DAVID_HEBi`.
 
+The plotting code assumes that the raw enrichment file names meet a number of criteria as in the example file names, in order for the plotting function to be accurate.
+Specifically, file names must contain:
+* the character string **goterm**
+* a reference to the GO ontology, either abbreviated (e.g. **bp**), or in full (e.g. **biological process**) - as a primary means of indexing the file names
+* a reference to the GO level (e.g. **1 - 5**) - as a secondary means of indexing the file names
+
+The `go_cat` argument accepts a number from 1-15, reflecting the alphabetical ordering of the file names:
+* **1-5** : biological process, level 1-5
+* **6-10** : cellular component, level 1-5
+* **11-15** : molecular function, level 1-5
+
 ### Usage
 
 First load the functions:
@@ -68,22 +78,11 @@ allo_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/allo_animals") #a
 hh_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
 ```
 
-We then can check that all data files are present; we expect there to be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
-Even if some are empty, it is important that the total number of files are present so that the `go_cat` argument of the following plotting argument is accurate.
+We then can check that all data files are present. We expect there to be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
+Even if some are empty, it is important that the total number of files are present so that the `go_cat` argument of the following plotting function is accurate.
 ```{r}
 length(c(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_david, allo_a_hebi_david, hh_a_hebi_david)) #90
 ```
-
-The plotting code also assumes that the raw enrichment file names meet a number of criteria as in the example file names, in order for the plotting function to be accurate.
-Specifically, file names must contain:
-* the character string **goterm**
-* a reference to the GO ontology, either abbreviated (e.g. **bp**), or in full (e.g. **biological process**) - as a primary means of indexing the file names
-* a reference to the GO level (e.g. **1 - 5**) - as a secondary means of indexing the file names
-
-The `go_cat` argument accepts a number from 1-15, reflecting the alphabetical ordering of the file names:
-* **1-5** : biological process, level 1-5
-* **6-10** : cellular component, level 1-5
-* **11-15** : molecular function, level 1-5
 
 To plot the cross-kingdom results of the functional enrichment analysis of HEBi genes in the biological process ontology, level 2, run:
 ```{r}
@@ -91,9 +90,10 @@ GO_scatter(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_davi
            y_label = "GO term (Biological Process level 2)")
 ```
 
-The output should of these functions should match the following plot, which can also be found as an example output file in `files/DAVID_BP_2.png`.
+The output should of these functions should match the following plot, which can also be found as an example output file in `example_files/DAVID_BP_2.png`.
 
-![Image of DAVID output plot](files/DAVID_BP_2.png "DAVID output plot")  
+![Image of DAVID output plot](example_files/DAVID_BP_2.png "DAVID output plot")  
+
 The plot shows no common enriched GO terms at biological process level 2.
 
 Alternatively, to see if there are any common GO terms across any GO ontology level, run:
