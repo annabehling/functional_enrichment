@@ -18,7 +18,7 @@ pannzer_to_golist <- function(pannzer_df){
   structure(go_df$goid, .Names=go_df$qpid)
 }
 
-#get the list of interesting genes from the classes_df dataframe that are in the HEBl, HEBi and HER categories
+# get the list of interesting genes from the classes_df dataframe that are in the HEBl, HEBi and HER categories
 get_int_genes <- function(classes_df, gene_names){
   #classes_df : dataframe with one gene ID per row and expression category classifications for each gene
   #gene_names : character vector of all genes IDs with a non-NA expression category classification
@@ -37,7 +37,7 @@ get_int_genes <- function(classes_df, gene_names){
   list(HEBl_geneList, HEBi_geneList, HER_geneList, PEIde_geneList)
 }
 
-#make the topGO data object
+# make the topGO data object
 make_topGO_DO <- function(int_gene_list, ontology, gene2GO_list){
   #int_gene_list : named list of interesting genes
   #ontology : two letter GO ontology code (BP / CC / MF)
@@ -50,7 +50,7 @@ make_topGO_DO <- function(int_gene_list, ontology, gene2GO_list){
   fishers_table
 }
 
-#run enrichment analyses for the BP, CC, MF ontologies and filter the results
+# run enrichment analyses for the BP, CC, MF ontologies and filter the results
 all_enriched <- function(int_genes, all_golist){
   #int_genes : indexed output from get_int_genes() where [[1]] = HEBl, [[2]] = HEBi, [[3]] = HER
   #all_golist : gene2GO list containing all genes (that have a non-NA expression classification), with mapped GO IDs 
@@ -67,7 +67,7 @@ all_enriched <- function(int_genes, all_golist){
   all_tab[as.numeric(all_tab$`p value`) < 0.05, ] #print out only results where p < 0.05
 }
 
-#plot enrichment results for a particular expression classification
+# plot enrichment results for a particular expression classification
 topGO_scatter <- function(allo_f_topgo_out, hh_f_topgo_out, allo_p_topgo_out, hh_p_topgo_out, allo_a_topgo_out, hh_a_topgo_out, y_label){
   #allo_f_topgo_out : allopolyploid fungi output of all_enriched()
   #hh_f_topgo_out : homoploid hybrid fungi output of all_enriched()
