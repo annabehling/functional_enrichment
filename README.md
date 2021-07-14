@@ -185,7 +185,7 @@ her_topgo <- all_enriched(int_genes[[3]], sub_gene2go)
 peide_topgo <- all_enriched(int_genes[[4]], sub_gene2go)
 ```
 
-We can then run the above analyses on all six of our hybrid species (the following example outputs of which are all available in `files/topGO_output`).
+We can then run the above analyses on all six of our representative hybrid species (the following example outputs of which are all available in `example_files/topGO_output`).
 * `allo_a_hebi_topgo.txt` : allopolyploid animals HEBi
 * `allo_a_hebl_topgo.txt` : allopolyploid animals HEBl
 * `allo_a_her_topgo.txt` : allopolyploid animals HER
@@ -211,12 +211,17 @@ We can then run the above analyses on all six of our hybrid species (the followi
 * `hh_p_her_topgo.txt` : homoploid hybrid plants HER
 * `hh_p_peide_topgo.txt` : homoploid hybrid plants PEI de
 
-Read in the example output files using, e.g.
+Read in each example output file, e.g.:
 ```{r}
-hh_p_hebi_topgo <- read.table("files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+allo_f_hebi_topgo <- read.table("example_files/topGO_output/allo_f_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+hh_f_hebi_topgo <- read.table("example_files/topGO_output/hh_f_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+allo_p_hebi_topgo <- read.table("example_files/topGO_output/allo_p_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+hh_p_hebi_topgo <- read.table("example_files/topGO_output/hh_p_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+allo_a_hebi_topgo <- read.table("example_files/topGO_output/allo_a_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
+hh_a_hebi_topgo <- read.table("example_files/topGO_output/hh_a_hebi_topgo.txt", header = TRUE, sep = "\t", quote = '"')
 ```
 
-Then, to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, run:
+Then, to make a scatter plot to compare functional enrichment of a particular expression classification across all hybrid species, run e.g.:
 ```{r}
 topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               hh_f_hebi_topgo[hh_f_hebi_topgo$ontology == "BP", ],
@@ -227,12 +232,12 @@ topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               y_label = "GO term (Biological Process)")
 ```
 
-In this example code, we have plotted enrichment of biological process, in the HEBi category.
-The output should of these functions should match the following plot, which can also be found as an example output file in `files/topGO_BP.png`.
+In this example code, we have plotted enrichment of biological process, in the HEBi category.  
+The output should of these functions should match the following plot, which can also be found as an example output file in `example_files/topGO_BP.png`.
 
-![Image of topGO output plot](files/topGO_BP.png "topGO output plot")
+![Image of topGO output plot](example_files/topGO_BP.png "topGO output plot")
 
-As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear to have reached the same conclusion as the DAVID results: no GO terms common to every system.
+As mentioned above, topGO performs level-independent functional enrichment of GO terms, which makes the y axis of this plot far more populated (with enriched GO terms from all levels) than the DAVID plot. Consequently, this topGO plot is less effective at comparing cross-kingdom enriched GO terms, however, it does appear to have reached the same conclusion as the DAVID results: no GO terms common to all six representative systems.
 
 ## Additional data availability
 
@@ -247,10 +252,10 @@ More specifically, the `all_DAVID_files/` folder contains one `input_background/
 * allopolyploid animals (file suffix 'allo_a')
 * homoploid hybrid animals (file suffix 'HH_a')
 
-The `all_DAVID_files/` folder also contains all GO (level 1-5), KEGG, COG and UniProt keyword output files produced from the DAVID functional enrichment analyses. These are organised firstly by representative system, and secondly by expression category.
+The `all_DAVID_files/` folder also contains all GO (biological process, cellular component, molecular function level 1-5), KEGG, COG and UniProt keyword output files produced from the DAVID functional enrichment analyses. These are organised by representative system in the first instance, and by expression category in the second instance.
 
 More information about the raw genomic and RNA-seq data used to generate the input gene lists can be found in Supplementary File 2, [here](https://github.com/annabehling/masters_supplementary "masters_supplementary").
 
-## Acknoledgements
+## Acknowledgements
 
 Thank you to [David Winter](https://github.com/dwinter "github.com/dwinter") for the `pannzer_to_golist()` code.
