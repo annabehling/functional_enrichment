@@ -117,7 +117,7 @@ More information on how this classification dataframe can be made from raw read 
 
 2. A file with GO term annotations for each gene (e.g. from [Pannzer2](http://ekhidna2.biocenter.helsinki.fi/sanspanz/ "Pannzer") or [Ensembl Biomart](https://www.ensembl.org/biomart/martview/9411b747344f748c4cc79534aa27827c "Biomart")).
 
-Examples of these input files can be found in `files/topGO_input`.
+Examples of these input files can be found in `example_files/topGO_input`. Namely, 1. `sub_classes_df.txt` and 2. `pannzer_go_anno.out`.
 
 ### Usage
 
@@ -129,7 +129,7 @@ source("topGO_functions.R")
 In this example we will use a homoploid hybrid (HH) plant Pannzer2 output file for GO annotations.
 (See `topGO_functions.R` for an analogous function for working with Biomart annotation data.)
 ```{r}
-go_anno <- read.table("files/topGO_input/pannzer_go_anno.out", 
+go_anno <- read.table("example_files/topGO_input/pannzer_go_anno.out", 
 	quote='"', sep="\t", header=TRUE, colClasses = c("goid"="character", "qpid"="character"))
 ```
 
@@ -141,16 +141,16 @@ go_anno_filt$goid <- paste0("GO:", go_anno_filt$goid) #paste "GO:" to beginning 
 
 Read in the classification dataframe:
 ```{r}
-sub_classes_df <- read.table("files/topGO_input/sub_classes_df.txt", sep = "\t", header = TRUE)
+sub_classes_df <- read.table("example_files/topGO_input/sub_classes_df.txt", sep = "\t", header = TRUE)
 ```
 
-Ensure that the format of the HH plant `sub_classes_df$$gene_id` matches the HH plant `go_anno_filt$qpid`:
+Ensure that the format of the HH plant `sub_classes_df$gene_id` matches the HH plant `go_anno_filt$qpid`:
 ```
 go_anno_filt$qpid <- str_replace(go_anno_filt$qpid, "prot", "cds")
 ```
 
 Make a list of background genes with GO annotations, in **gene2GO** format:  
-  * Zero, one or many GO IDs are annotated to each gene
+  * Zero, one, or many GO IDs are annotated to each gene
 ```{r}
 gene2go_list <- pannzer_to_golist(go_anno_filt)
 ```
@@ -165,11 +165,11 @@ Make a character vector of all gene IDs that have a non-NA expression classifica
 gene_names <- names(sub_gene2go) 
 ```
 
-To get the lists of interesting genes in the HEBl, HEBi and HER, run:
+To get the lists of interesting genes in the HEBl, HEBi, HER and PEI de, run:
 ```{r}
 int_genes <- get_int_genes(sub_classes_df, gene_names)
 ```
-We won't perform an enrichment analysis of the PEI category, due to the high number of genes that are classified as PEI; it is difficult to test for enrichment when the subset of genes comprises the majority of the background.
+We won't perform an enrichment analysis of the PEI eq category due to the high number of genes that have this classification; it is difficult to test for enrichment when the subset of genes comprises the majority of the background.
 
 We can index the list to separate out the interesting genes in each of the categories, where:
 * `int_genes[[1]]` : HEBl genes  
