@@ -2,7 +2,7 @@
 
 Functional enrichment analyses can be used to identify an over-representation of biological functions in a subset of interesting genes, when compared with the entire background gene set.
 
-This example investigates the evolution of hybrid gene expression, so the subset of interesting genes are those with a particular expression pattern, relative to their parental species.
+This example investigates the evolution of hybrid gene expression, so the subset of interesting genes is those with a particular expression pattern, relative to their parental species.
 
 Briefly, the five possible categories for hybrid gene expression used here are:
 
