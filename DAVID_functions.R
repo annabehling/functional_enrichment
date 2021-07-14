@@ -6,7 +6,7 @@ library(ggplot2)
 
 ## load functions
 
-#filter a raw DAVID GO enrichment table
+# filter a raw DAVID GO enrichment table
 filter_david_go <- function(david_out){
   #david_out : raw DAVID GO enrichment table
   raw_tab <- read.table(david_out, header = TRUE, sep = "\t", quote = '"', stringsAsFactors = FALSE) #read in DAVID output
@@ -20,14 +20,14 @@ filter_david_go <- function(david_out){
   filt_tab
 }
 
-#filter all raw DAVID GO enrichment tables in a directory
+# filter all raw DAVID GO enrichment tables in a directory
 read_david_go <- function(results_dir){
   #results_dir : directory containing raw DAVID GO enrichment tables
   fnames <- list.files(results_dir, "goterm", full.names=TRUE) #list all files in directory containing "goterm" character string
   lapply(fnames, filter_david_go) #apply the filtering function to to all GO enrichment files
 }
 
-#plot enrichment results for a given GO ontology and level
+# plot enrichment results for a given GO ontology and level
 GO_scatter <- function(allo_f_david_out, hh_f_david_out, allo_p_david_out, hh_p_david_out, allo_a_david_out, hh_a_david_out, go_cat, y_label){
   #allo_f_david_out : allopolyploid fungi output of read_david_go()
   #hh_f_david_out : homoploid hybrid fungi output of read_david_go()
@@ -67,7 +67,7 @@ GO_scatter <- function(allo_f_david_out, hh_f_david_out, allo_p_david_out, hh_p_
           axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1)) #formats angle and position of x axis labels
 }
 
-#find common GO terms across all representative species 
+# find common GO terms across all representative species 
 common_terms <- function(df1, df2, df3, df4, df5, df6){
   #df1 - df6 : output of read_david_go()
   join_1 <- inner_join(df1, df2, by="GO term")
