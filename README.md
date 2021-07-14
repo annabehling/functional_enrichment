@@ -2,9 +2,9 @@
 
 Functional enrichment analyses can be used to identify an over-representation of biological functions in a subset of interesting genes, when compared with the entire background gene set.
 
-In this instance, we are investigating the evolution of hybrid gene expression, so the subset of interesting genes are those with a particular expression pattern, relative to their parental species.
+This example investigates the evolution of hybrid gene expression, so the subset of interesting genes are those with a particular expression pattern, relative to their parental species.
 
-Briefly, the five possible categories for hybrid gene expression are:
+Briefly, the five possible categories for hybrid gene expression used here are:
 
 1. **Parental differential expression inheritance** (PEI de) : a parental expression bias is maintained in the hybrid.
 2. **Parental equal expression inheritance** (PEI eq) : equal parental expression is inherited by the hybrid.
@@ -14,7 +14,7 @@ Briefly, the five possible categories for hybrid gene expression are:
 
 More information on these classes can be found in the following publications:
 
-Cox, M.P., T. Dong, G. Shen, Y. Dalvi, D.B. Scott and A.R.D. Ganley. 2014. An interspecific fungal hybrid reveals cross-kingdom rules for allopolyploid gene expression patterns. *PLoS Genetics* 10: e1004180. [https://doi.org/10.1371/journal.pgen.1004180](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004180)
+Cox, M.P., T. Dong, G. Shen, Y. Dalvi, D.B. Scott and A.R.D. Ganley. 2014. An interspecific fungal hybrid reveals cross-kingdom rules for allopolyploid gene expression patterns. *PLOS Genetics* 10: e1004180. [https://doi.org/10.1371/journal.pgen.1004180](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004180)
 
 Yoo, M.J., Szadkowski, E., & Wendel, J.F. 2013. Homeolog expression bias and expression level dominance in allopolyploid cotton. *Heredity* 110: 171-180. [https://doi.org/10.1038/hdy.2012.94](https://www.nature.com/articles/hdy201294)
 
@@ -78,7 +78,7 @@ allo_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/allo_animals") #a
 hh_a_hebi_david <- read_david_go("./example_files/DAVID_HEBi/HH_animals") #homoploid hybrid animals
 ```
 
-We then can check that all data files are present. We expect there to be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
+Then check that all data files are present. There should be 15 tables (level 1-5 in the three GO ontologies) x 6 biological systems = 90 data tables total.  
 Even if some are empty, it is important that the total number of files are present so that the `go_cat` argument of the following plotting function is accurate.
 ```{r}
 length(c(allo_f_hebi_david, hh_f_hebi_david, allo_p_hebi_david, hh_p_hebi_david, allo_a_hebi_david, hh_a_hebi_david)) #90
@@ -126,7 +126,7 @@ First load the functions:
 source("topGO_functions.R")
 ```
 
-In this example we will use a homoploid hybrid (HH) plant Pannzer2 output file for GO annotations.
+This example uses a homoploid hybrid (HH) plant Pannzer2 output file for GO annotations.
 (See `topGO_functions.R` for an analogous function for working with Biomart annotation data.)
 ```{r}
 go_anno <- read.table("example_files/topGO_input/pannzer_go_anno.out", 
@@ -169,7 +169,7 @@ To get the lists of interesting genes in the HEBl, HEBi, HER and PEI de, run:
 ```{r}
 int_genes <- get_int_genes(sub_classes_df, gene_names)
 ```
-We won't perform an enrichment analysis of the PEI eq category due to the high number of genes that have this classification; it is difficult to test for enrichment when the subset of genes comprises the majority of the background.
+There is no enrichment analysis of the PEI eq category due to the high number of genes that have this classification; it is difficult to test for enrichment when the subset of genes comprises the majority of the background.
 
 We can index the list to separate out the interesting genes in each of the categories, where:
 * `int_genes[[1]]` : HEBl genes  
@@ -185,7 +185,7 @@ her_topgo <- all_enriched(int_genes[[3]], sub_gene2go)
 peide_topgo <- all_enriched(int_genes[[4]], sub_gene2go)
 ```
 
-We can then run the above analyses on all six of our representative hybrid species (the following example outputs of which are all available in `example_files/topGO_output`).
+You can then run the above analyses on all six of the representative hybrid species (the following example outputs of which are all available in `example_files/topGO_output`).
 * `allo_a_hebi_topgo.txt` : allopolyploid animals HEBi
 * `allo_a_hebl_topgo.txt` : allopolyploid animals HEBl
 * `allo_a_her_topgo.txt` : allopolyploid animals HER
@@ -232,7 +232,7 @@ topGO_scatter(allo_f_hebi_topgo[allo_f_hebi_topgo$ontology == "BP", ],
               y_label = "GO term (Biological Process)")
 ```
 
-In this example code, we have plotted enrichment of biological process, in the HEBi category.  
+This example code plots the enrichment of the biological process ontology, in the HEBi category.  
 The output should of these functions should match the following plot, which can also be found as an example output file in `example_files/topGO_BP.png`.
 
 ![Image of topGO output plot](example_files/topGO_BP.png "topGO output plot")
